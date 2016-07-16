@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>点击</title>
+	<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+	<script type="text/javascript">
+		$(function(){
+				var icount=0;
+				var _event=$(".event");
+				var length=_event.length;
+				var eWidth=_event.width();
+				var iNow=Math.ceil(length/6)-1;	
+				var dis=length%6;		
+				var oWidth=$(".layout").width();	
+				var time=Date.now();	
+				var num=0;
+				var _wrap=$(".wrap");
+				var _cR=$(".click_right");
+				var _cL=$(".click_left");
+				var _eT=$(".event_text");
+				var dWidth=$(".div").width();
+				var dist=(dWidth-oWidth)/2;
+				var index=0;
+				var oText=[
+				"我出生了2个月,距离与怡宝恋爱还有19年",
+				"我1岁了,距离与怡宝恋爱还有18年",
+				"我2岁了,距离与怡宝恋爱还有17年",
+				"我3岁了,距离与怡宝恋爱还有16年",
+				"我4岁了,距离与怡宝恋爱还有15年",
+				"我5岁了,距离与怡宝恋爱还有14年",
+				"我6岁了,距离与怡宝恋爱还有13年",
+				"我7岁了,距离与怡宝恋爱还有12年",
+				"我8岁了,距离与怡宝恋爱还有11年",
+				"我9岁了,距离与怡宝恋爱还有10年",
+				"我10岁了,距离与怡宝恋爱还有9年",
+				"我11岁了,距离与怡宝恋爱还有8年",
+				"我12岁了,距离与怡宝恋爱还有7年",
+				"我13岁了,距离与怡宝恋爱还有6年",
+				"我14岁了,距离与怡宝恋爱还有5年",
+				"我15岁了,距离与怡宝恋爱还有4年",
+				"我16岁了,距离与怡宝恋爱还有3年",
+				"我17岁了,距离与怡宝恋爱还有2年",
+				"我18岁了,距离与怡宝恋爱还有1年,我跟怡宝进入了同一间大学,从我们在体育馆的第一次相见,我就知道我们两关系不一般。",
+				"我19岁了,嘿嘿,我与这辈子最爱的人恋爱了",
+				"我20岁了,我们相爱一年",
+				"我21岁了,我们相爱两年",
+				"我22岁了,我们相爱三年",
+				"我23岁了,距离相爱四年还有三个月不到"
+				];
+				$(".wrap").width(length*eWidth);
+				if(dis==0){
+					dis=6;
+				}	
+				_cR.click(function(){
+
+					if(icount<iNow){
+						icount++;
+						if(icount==iNow){
+							_wrap.animate({left: ((-icount+1)*oWidth)-(eWidth*dis)}, 400);
+							$(this).hide();
+						}else{
+							_wrap.animate({left: -icount*oWidth}, 400);
+						}
+					}												
+					if (icount>0) {
+							_cL.show();						
+						}	
+						_eT.hide();					
+				});
+				_cL.click(function(){
+					var aLeft=	_wrap.position().left;					
+					if(icount>0){
+						icount--;	
+						if(icount==0){
+						_wrap.animate({left: 0}, 400);
+						$(this).hide();
+
+						}else{
+							_wrap.animate({left: aLeft+oWidth}, 400);	
+						}								
+					}								
+					if (icount<iNow) {
+						_cR.show();
+					}
+					_eT.hide();						
+				});
+				_cL.mouseover(function(){
+					$(this).addClass('left_active');
+				}).mouseout(function(){
+					$(this).removeClass('left_active');
+				});
+				_cR.mouseover(function(){
+					$(this).addClass('right_active');
+				}).mouseout(function(){
+					$(this).removeClass('right_active');
+				});
+				_event.mouseover(function(){
+					_eT.show();	
+					index=$(this).index();	
+				/*	var oText=[
+				"我们相爱了","有种来打我啊","我爱怡宝"
+				];*/
+					_eT.find('span').html(oText[index]);
+					//数组上面有定义这里只是为了方便你看
+					var tLeft=$(this).offset().left-dist;
+					_eT.css({
+					
+					left: tLeft,
+					transition: 'left 0.5s ease ',
+					WebkitTransition: 'left 0.5s ease ',
+					MozTransition: 'left 0.5s ease ',
+					OTransition: 'left 0.5s ease '
+					});								
+					$(this).find('i').addClass('event_active');
+					$(this).siblings().find('i').removeClass('event_active');
+					$(this).find('p').addClass('p_active');
+					$(this).siblings().find('p').removeClass('p_active');
+				});
+				
+		})
+	</script>
+	<style type="text/css">
+	
+	.clear{clear:both; height:0; overflow:hidden;}
+	.clearfix:after{content:"";display:block;height:0;clear:both;visibility:hidden;}
+	.clearfix{zoom:1;}
+	body,div,li,ul,p{
+		margin: 0px;
+		padding: 0px;
+	}
+			.div{
+				margin-top: 150px;
+				width: 100%;
+				background: url(img/timeline-bg.png) repeat-x;
+				height: 140px;
+			}
+			.layout{
+				position: relative;
+				width: 1200px;
+				height: 100%;
+				top: -10px;
+				margin: 0 auto;
+			}
+			.event_wrap{				
+			width: 100%;
+   			height: 100%;
+   			overflow: hidden;
+    		position: relative;	
+			}
+			.wrap{		
+				
+				position: absolute;
+				left: 0px;			
+				height: 100%;		
+			}
+			.event{
+				width: 200px;
+				float: left;
+    			text-align: center;
+   				z-index: 999;
+   				height: 80px;
+   				position: relative;
+   				
+			}
+			.event i{
+				width: 24px;
+				height: 24px;
+				background-image: url(img/index525.png);
+				background-position: -139px -78px;
+				display: inline-block;
+				
+				background-origin:content-box;
+			}
+			.event p{
+				width: 92%;
+				margin-top: 10px;	
+				height: auto;			
+				padding: 4%;				
+				color: #c0beb9;
+				
+			}
+			.click_left{
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				width: 30px;
+				height: 30px;
+				background-image: url(img/index525.png);
+				background-position: -236px -224px;
+				z-index: 1111;
+				display: none;
+			}
+			.click_right{
+				position: absolute;
+				top: 0px;
+				right: 0px;
+				width: 30px;
+				height: 30px;
+				background-image: url(img/index525.png);
+				background-position: -268px -224px;
+				z-index: 1111;
+			}
+			.right_active{
+				background-image: url(img/index525.png);
+				background-position: -162px -94px;
+			}
+			.left_active{
+				background-image: url(img/index525.png);
+				background-position: -204px -225px;
+			}
+			.event_active{
+				background-image: url(img/index525.png) !important;
+				background-position: -116px -50px !important;
+			}
+			.p_active{
+				color: #1cbcb4 !important;
+			}
+			.event_text{
+				border: 1px solid #1cbcb4;
+				height: auto;
+				width: 178px;
+				padding: 10px;
+				position: absolute;
+				bottom:150px;
+				left: 0px;
+				color: #878787;
+				border-radius: 4px;
+				display: none;
+				font-size: 14px;
+			}
+			.arrow{
+				    position: absolute;
+				    bottom: -8px;
+				    left: 50%;
+				    margin-left: -8px;
+				    height: 0;
+				    width: 0;
+				    -webkit-border-radius: 3px;
+				    -moz-border-radius: 3px;
+				    -ms-border-radius: 3px;
+				    border-radius: 3px;
+				    border-top: 8px solid #1cbcb4;
+				    border-left: 8px dashed transparent;
+				    border-right: 8px dashed transparent;
+
+			}
+			.arrow:after{
+
+				left: -8px;
+				bottom: 2px;
+				border-top: 8px solid #fff;
+			    border-left: 8px dashed transparent;
+			    border-right: 8px dashed transparent;
+			}
+	</style>
+
+</head>
+<body>
+	  <div class="div">
+	  	<div class="layout">
+		  	<span class="click_left " ></span>
+		  	<span class="click_right "></span>
+		  	<div class="event_wrap">	  		
+			  	  <div class="wrap clearfix">
+						<div class="event" desc="">
+							<i class="event_active"></i>
+							<p>1993年10月4号</p>
+						</div>	
+						<div class="event"desc="">
+							<i></i>
+							<p>1994年10月4号</p>
+						</div>	 
+						<div class="event"desc="">
+							<i></i>
+							<p>1995年10月4号</p>
+						</div>	 
+						<div class="event"desc="">
+							<i></i>
+							<p>1996年10月4号</p>
+						</div>	   	   
+						<div class="event"desc="">
+							<i></i>
+							<p>1997年10月4号</p>
+						</div>	 
+						<div class="event"desc="">
+							<i></i>
+							<p>1998年10月4号</p>
+						</div>	 
+						<div class="event"desc="">
+							<i></i>
+							<p>1999年10月4号</p>
+						</div>	 
+						<div class="event"desc="">
+							<i></i>
+							<p>2000年10月4号</p>
+						</div>	 
+						<div class="event"desc="">
+							<i></i>
+							<p>2001年10月4号</p>
+						</div>	 
+						<div class="event"desc="">
+							<i></i>
+							<p>2002年10月4号</p>
+						</div>	 
+						<div class="event"desc="">
+							<i></i>
+							<p>2003年10月4号</p>
+						</div>	 
+						<div class="event"desc="">
+							<i></i>
+							<p>2004年10月4号</p>
+						</div>	 
+						<div class="event"desc="">
+							<i></i>
+							<p>2005年10月4号</p>
+						</div>	
+						<div class="event"desc="">
+							<i></i>
+							<p>2006年10月4号</p>
+						</div>	 
+						<div class="event"desc="">
+							<i></i>
+							<p>2007年10月4号</p>
+						</div>	 
+						<div class="event"desc="">
+						<i></i>
+						<p>2008年10月4号</p>
+						</div>	 
+						<div class="event"desc="">
+							<i></i>
+							<p>2009年10月4号</p>
+						</div>	
+						<div class="event"desc="">
+							<i></i>
+							<p>2010年10月4号</p>
+						</div>	 
+						<div class="event"desc="">
+							<i></i>
+							<p>2011年10月4号</p>
+						</div>	
+						<div class="event"desc="">
+							<i></i>
+							<p>2012年10月4号</p>
+						</div>	
+						<div class="event"desc="">
+							<i></i>
+							<p>2013年10月4号</p>
+						</div>	
+						<div class="event"desc="">
+							<i></i>
+							<p>2014年10月4号</p>
+						</div>	
+						<div class="event"desc="">
+							<i></i>
+							<p>2015年10月4号</p>
+						</div>	 					
+						<div class="event"desc="">
+							<i></i>
+							<p>2016年10月4号</p>
+						</div>	
+			  	  </div>
+			  </div>
+			 <div class="event_text">
+			  	<i class="arrow"></i>
+			  	<span></span>
+			 </div>
+		  </div>
+	  </div>
+</body>
+</html>
