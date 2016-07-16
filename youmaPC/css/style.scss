@@ -1,0 +1,194 @@
+#header{
+	height: 160px;
+	width: 1920px;
+	background-color: #3a454a;
+	*background-color: #3a454a;
+	*background-color:#3a454a!important;  
+}
+.wrapIn{
+	width: 1000px;
+	margin: 0 auto;
+	position: relative;
+	
+}
+.youma_logo{
+	float: left;
+	margin-top: 40px;
+
+}
+.nav{
+	float: left;
+	margin-top: 100px;
+	li:nth-of-type(1){
+		margin-left: 46px;
+	}
+	li{
+		line-height: 40px;
+		font-size: 18px;
+		float: left;
+		color: #fff;
+		margin-left: 20px;
+	}
+}
+#banner{
+	width: 100%;
+	height: 580px;
+	position: relative;
+	ul{
+		height: 100%;
+	}
+	li{
+		position: absolute;
+		left: 0px;
+		top: 0px;
+	}
+}
+.search{
+	float: right;
+	margin-top: 100px;
+	#search{
+		float: left;
+		height: 39px;
+		border: 0px;
+		background-color: #2a3235;
+		color:#fff;
+		padding-left: 10px;
+	}
+	.btn{
+		float: left;
+	}
+}
+#content{
+	width: 1920px;
+	background-color: #fff;
+}
+.content_heading{
+	margin-top: 36px;
+	width: 100%;
+	p{
+		margin-left: 4px;
+		float: left;
+		color: #e7e7e7;
+	}
+}
+.heading_logo{
+	float: left;
+
+}
+.check_list{
+	width: 100%;
+
+	li{
+		float: left;
+		width: 320px;
+		margin-right: 20px;
+		position: relative;
+		margin-bottom: 40px;
+		overflow: hidden;
+	}
+	li:nth-of-type(3n){
+		margin-right: 0px;
+	}
+}
+.tittle{
+	width: 319px;
+	text-align: center;
+	line-height: 200px;
+	position: absolute;
+	width: 100%;
+	left: 0;
+	height: 100%;
+	top: 0px;
+	color: #fff;
+	font-size: 18px;
+	z-index: 9999;
+	background: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(128,128,128,0.8));
+	background: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(128,128,128,0.8));
+	background: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(128,128,128,0.8));
+	
+}
+.tittle_bot{
+	width: 285px;
+	position: absolute;
+	left: 0px;
+	top: 201px;
+	height: 58px;
+	z-index: 8888;
+	background: -webkit-linear-gradient(top,rgba(0,0,0,0.5), rgba(128,128,128,0.8));
+	background: -ms-linear-gradient(top,rgba(0,0,0,0.5), rgba(128,128,128,0.8));
+	background: -moz-linear-gradient(top,rgba(0,0,0,0.5), rgba(128,128,128,0.8));
+	color: #fff;
+	padding: 16px;
+	font-size: 14px;
+	overflow: hidden;
+	
+}
+.fix_box{
+	position: absolute;
+	top: 400px;
+	right:-74px;
+	width: 50px;
+	
+	li{
+		position: absolute;
+		bottom: 0px;
+		left: 0px;
+	}
+}
+
+.num{
+	width: 248px;
+	margin: 50px auto;
+	height: 30px;
+	.left,.right,li {
+		width: 30px;
+		border-radius: 6px;
+		background-color: #e5e5e5;
+		float: left;
+		text-align: center;
+		height: 30px;
+		line-height: 30px;
+		margin-right: 6px;
+		cursor: pointer;
+	}
+	.right{
+		margin-right: 0px;
+	}
+}
+
+#footer{
+	height: 160px;
+	background-color: #3a454a;
+	width: 1920px;
+	*background-color: #3a454a;
+	*background-color:#3a454a!important;  
+}
+.bot_nav{
+	position: absolute;
+	left: 200px;
+	top: 34px;
+	li{
+		float: left;
+		margin-right: 70px;
+		color: #fff;
+	}
+}
+.foot_text{
+	position: absolute;
+	left: 240px;
+	top: 100px;
+	line-height: 26px;
+	text-align: center;
+	color: #fff;
+	font-size: 14px;
+}
+.erweima{
+	position: absolute;
+	right: 94px;
+	top: 30px;
+}
+
+.num_active{
+	color: #fff !important;
+	background-color: #4ba6ed !important;
+}

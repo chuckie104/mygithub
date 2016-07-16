@@ -1,0 +1,18 @@
+
+html{overflow-y: scroll; overflow-x:hidden; _background-image:url(about:blank); _background-attachment:fixed;}
+body {font-family:"Microsoft Yahei",Arial,'Hiragino Sans GB',sans-serif; font-size:16px; color:#333333;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,sup,sub{margin:0;padding:0}
+fieldset,img{border:0}
+em{font-style: normal;}
+ul,ol,li {list-style:none;}
+img{-ms-interpolation-mode: bicubic; vertical-align:top;}
+input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;outline:none; font-family:"Microsoft Yahei";}
+.imgmiddle,input,select{vertical-align:middle;}
+.clear{clear:both; height:0; overflow:hidden;}
+.clearfix:after{content:"";display:block;height:0;clear:both;visibility:hidden;}
+.clearfix{zoom:1;}
+.fl{float:left; display:inline;}
+.fr{float:right; display:inline;}
+a {text-decoration:none; color:#333333;}
+a:hover{ text-decoration:none; color:#f60;}
+a:active{blr:expression(this.onFocus=this.blur());}
