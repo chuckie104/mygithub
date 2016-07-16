@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>购物车</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="../css/shuanggui.css">
+	<link rel="stylesheet" href="../css/base.css">
+	<script type="text/javascript" src="../js/jquery-2.1.0.js"></script>
+	<script type="text/javascript">
+ 		$(function(){
+ 			//增加与减少商品 
+ 			$(".add").click(function(){
+ 				var oNum=$(this).siblings('.number').text();
+ 				   oNum=parseInt(oNum);
+ 				oNum=oNum+1;
+ 				$(this).siblings('.number').text(oNum);
+ 			});
+ 			$(".jian").click(function(){
+ 				var oNum=$(this).siblings('.number').text();
+ 				oNum=parseInt(oNum);
+ 				if (oNum!=0) {
+ 					oNum=oNum-1;
+ 					$(this).siblings('.number').text(oNum);
+ 				}else{
+ 					alert("购买商品不能更少了");
+ 				}						
+ 			});
+ 			$(".shoppingCard_delete").click(function(){
+ 				confirm("是否删除商品");
+ 			})
+ 			
+ 		})
+	</script>
+</head>
+<body>
+	<div class="shoppingCard_content">
+		<ul class="clearfix">
+			<li class="shoppingCard_list fl">
+				<div class="shoppingCard_img fl"> 
+	 					<img src="../images/tgzx.png">
+	 			</div>
+	 			<div class="shoppingCard_info fl">
+	 				<p>(第4111期)苹果 (APPLE) ipad</p>
+	 				<h3>剩余23人次</h3>
+	 				<div class="shoppingCard_info_bottom clearfix">
+	 					<div class="shoppingCard_function fl">
+		 					<div class="jian fl">-</div>
+		 					<div class="number fl">0</div>
+		 					<div class="add fl">+</div>	
+	 					</div>	
+	 					<div class="shoppingCard_delete fr">
+	 						<img src="../images/del.png">
+	 					</div>		
+	 				</div>
+	 			</div>
+			</li>
+			<li class="shoppingCard_list fl">
+				<div class="shoppingCard_img fl"> 
+	 					<img src="../images/tgzx.png">
+	 			</div>
+	 			<div class="shoppingCard_info fl">
+	 				<p>(第4111期)苹果 (APPLE) ipad</p>
+	 				<h3>剩余23人次</h3>
+	 				<div class="shoppingCard_info_bottom clearfix">
+	 					<div class="shoppingCard_function fl">
+		 					<div class="jian fl">-</div>
+		 					<div class="number fl">1</div>
+		 					<div class="add fl">+</div>	
+	 					</div>	
+	 					<div class="shoppingCard_delete fr">
+	 						<img src="../images/del.png">
+	 					</div>		
+	 				</div>
+	 			</div>
+			</li>
+			<li class="shoppingCard_list fl">
+				<div class="shoppingCard_img fl"> 
+	 					<img src="../images/tgzx.png">
+	 			</div>
+	 			<div class="shoppingCard_info fl">
+	 				<p>(第4111期)苹果 (APPLE) ipad</p>
+	 				<h3>剩余23人次</h3>
+	 				<div class="shoppingCard_info_bottom clearfix">
+	 					<div class="shoppingCard_function fl">
+		 					<div class="jian fl">-</div>
+		 					<div class="number fl">1</div>
+		 					<div class="add fl">+</div>	
+	 					</div>	
+	 					<div class="shoppingCard_delete fr">
+	 						<img src="../images/del.png">
+	 					</div>		
+	 				</div>
+	 			</div>
+			</li>
+		</ul>
+	</div>
+	<div class="shopping_alert clearfix">
+		<div class="shopping_alert_info fl">
+			<div>
+				<span>合计:</span><em>￥234.00</em>
+			</div>
+			<div>
+				共<strong>3</strong>个商品
+			</div>
+		</div>
+		<div class="settle_button fr" onclick=window.location.href="payment.html">
+			结算
+		</div>
+	</div>
+	<div class="homePage_footer">
+		<ul class="clearfix" >
+			<li onclick=window.location.href="homePage.html">
+				<img src="../images/taungou01.png">
+				<p>团购</p>
+			</li>
+			<li onclick=window.location.href="latestAnnouncement.html">
+				<img src="../images/tuangou02.png">
+				<p >最新揭晓</p>
+			</li>
+			<li onclick=window.location.href="shoppingCard.html">
+				<img src="../images/tuangou03.png">
+				<p class="homepage_pRed">购物车</p>
+			</li>
+			<li onclick=window.location.href="groudBuy.html">
+				<img src="../images/tuangou04.png">
+				<p>我的团购</p>
+			</li>
+		</ul>
+	</div>
+	<div class="big_fix_bg">
+		
+	</div>
+</body>
+</html>

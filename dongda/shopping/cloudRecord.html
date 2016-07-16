@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximun-scale=1.0,user-scalable=no">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/base.css">
+	<title>云购记录</title>
+</head>
+<body>
+	<nav id="cR_nav" class="clearfix">
+		<section>全部<div style="display:block"></div></section>
+		<section>进行中<div></div></section>
+		<section>已揭晓<div></div></section>
+	</nav>
+	<div class="cR_online">
+		<ul class="clearfix">
+			<li>
+				<div class="cR_pImage fl">
+					<img src="../images/product_home.png">
+				</div>
+				<div class="cR_info fl">
+					<p class="shopping_info_heading">
+						（第499期）正品Apple/苹果9.7英寸ipad pro平板电脑
+					</p>
+					<div class="homeProduct_schedule">
+						<div></div>
+					</div>
+					<div class="shopping_person">总需:450人次 剩余:122人次</div>
+					<h3>本期参与<span>10</span>人次</h3>
+				</div>
+				<em onclick="window.location.href='getRecord.html'">查看我的夺宝号码>></em>
+			</li>
+			<li>
+				<div class="cR_pImage fl">
+					<img src="../images/product_home.png">
+				</div>
+				<div class="cR_info fl">
+					<p class="shopping_info_heading">
+						（第499期）正品Apple/苹果9.7英寸ipad pro平板电脑
+					</p>
+					<div class="homeProduct_schedule">
+						<div></div>
+					</div>
+					<div class="shopping_person">总需:450人次 剩余:122人次</div>
+					<h3>本期参与<span>10</span>人次</h3>
+				</div>
+				<em onclick="window.location.href='getRecord.html'">查看我的夺宝号码>></em>
+			</li>
+		</ul>
+	</div>
+</body>
+<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("#cR_nav section").click(function(){
+			$(this).children('div').show();
+			$(this).siblings().children("div").hide();
+		});
+	})
+</script>
+</html>

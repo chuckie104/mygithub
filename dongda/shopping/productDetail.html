@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximun-scale=1.0,user-scalable=no">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/base.css">
+	<link rel="stylesheet" href="../css/swiper-3.3.1.min.css">
+	<title>商品详情</title>
+
+</head>
+<body>
+	<nav id="recentNews_nav" class="clearfix">
+		<section>第16期</section>
+		<section>第15期</section>
+		<section>第14期</section>
+		<section>第13期</section>
+	</nav>
+	<div class="swiper-container">
+	 <div class="swiper-wrapper">
+	    <div class="swiper-slide" ><img src="../images/11.png"></div>
+	    <div class="swiper-slide" ><img src="../images/222.png"></div>
+	    <div class="swiper-slide" ><img src="../images/333.png"></div>
+	  </div>
+	  <div class="swiper-pagination"></div>
+	</div>
+	<div class="end_alert">
+			<div>
+				 <img src="../images/select_logo_active.png">
+				 <span>添加购物车成功</span>
+			</div>
+	</div>
+	<div class="product_info clearfix">
+		<div class="product_info_top clearfix">			
+			<div class="product_heading">
+				（第499期）《致友人乐泉》
+			</div>
+			<div class="image_money">
+				<span>价值:<em>$42.00</em></span>
+			</div>
+		</div>	
+		<div class="product_bot clearfix">
+			<div class="product_bot_left fl">
+				<div class="product_jindu ">
+					<div class="jindu_wrap"></div>
+				</div>
+				<div class="product_num clearfix">
+					<p class="fl"><span id="appart_num">438</span><em>已参与</em></p>
+					<div class="fl"><span id="all_num">888</span><em>总需求</em></div>
+					<p class="fr"><span>450</span><em>剩余</em></p>
+				</div>
+			</div>
+			<div class="product_bot_right fl">
+				 <div class="fx">
+				 	  <img src="../images/fenxiang_03.png">
+				 </div>
+				 <p>分享</p>
+			</div>
+		</div>		
+	</div>
+	<div class="pro_infomation">
+		<div class="pro_in_top clearfix ">
+			<div class="pro_in_img fl">
+				<img src="../images/pro_logo.png">
+			</div>
+			<p class="pro_heading fl"><<致友人乐泉>></p>
+		</div>
+		<ul>
+			<li>
+				<span>作文规格:</span>
+				<em>22cmX32cmX2 1.2平尺</em>
+			</li>
+			<li>
+				<span>作品材质:</span>
+				<em>信笺纸</em>
+			</li>
+			<li>
+				<span>创作时间:</span>
+				<em>2014年</em>
+			</li>
+			<li>
+				<span>作为释文:</span>
+				<em><<致友人乐泉>></em>
+			</li>
+			<div class="work_text">
+				先帝知臣谨慎，故临崩寄臣以大事也。受命以来，夙夜忧叹，恐托付不效，以伤先帝之明；故五月渡泸，深入不毛。今南方已定，兵甲已足，当奖率三军，北定中原，庶竭驽钝，攘除奸凶，兴复汉室，还于旧都。
+			</div>
+			<div class="author">
+				<h3>作者简介:</h3>
+				<div class="author_info">列奥纳多·迪·皮耶罗·达·芬奇 （Leonardo Di Serpiero Da Vinci），儒略历1452年4月15日（公历1452年4月23日）~1519年5月2日，享年67岁。欧洲文艺复兴时期的天才科学家、发明家、画家。现代学者称他为“文艺复兴时期最完美的代表”，是人类历史上绝无仅有的全才，他最大的成就是绘画，他的杰作《蒙娜丽莎》、《最后的晚餐》，《岩间圣母》等作品，体现了他精湛的艺术造诣。他认为自然中最美的研究对象是人体，人体是大自然的奇妙之作品，画家应以人为绘画对象的核心。</div>
+			</div>
+		</ul>
+		<div class="granident">
+			<div>
+			 <img src="../images/arrow_dowm.png" >
+			 </div>
+		</div>
+	</div>
+	<div class="href_online">
+		<section>
+			参与记录
+			<img src="../images/right_arrow.png">
+		</section>
+		<section onclick="window.location.href='img.html'">
+			图片详情
+			<img src="../images/right_arrow.png">
+		</section>
+		<section>
+			晒图分享
+			<img src="../images/right_arrow.png">
+		</section>
+
+	</div>
+	
+	<div class="bg_fix">
+		
+	</div>
+	<div class="bottom_select clearfix">
+		<section id="join">立即参与</section>
+		<section id="shopping">加入购物车</section>
+	</div>
+</body>
+<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="../js/swiper-3.3.1.jquery.min.js"></script>
+<script type="text/javascript">
+	var mySwiper = new Swiper('.swiper-container',{
+	autoplay: 2000,
+	pagination : '.swiper-pagination',
+	//pagination : '#swiper-pagination1',
+	autoplayDisableOnInteraction:false,
+	})
+
+	$(function(){
+		$(".product_focus").click(function(){
+			alert("关注成功")
+		});
+		$("#shopping").click(function(){
+			$(".end_alert").css('display', 'table');
+			setTimeout(function(){
+					$(".end_alert").css('display', 'none');
+				}, 1000);
+		});
+		$(".granident").click(function(){
+			$(".pro_infomation").css('height', "auto");
+			$(this).hide();
+		});
+	})
+</script>
+</html>

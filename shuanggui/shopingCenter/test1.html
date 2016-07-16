@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head >
+	<meta charset="UTF-8">
+	<title>团购中心</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="../css/shuanggui.css">
+	<link rel="stylesheet" href="../css/base.css">
+	<script type="text/javascript" src="../js/jquery-2.1.0.js"></script>
+	<script type="text/javascript" src="../js/swiper-3.3.1.jquery.min.js"></script>
+	<link rel="stylesheet" href="../css/swiper-3.3.1.min.css">
+	<script type="text/javascript">
+	$(function(){
+		//上方选择字体变红
+		$(".homePage_list").find("li").click(function(){
+			$(this).find("span").addClass('nav-active');
+			$(this).siblings('li').find('span').removeClass('nav-active');
+		});
+	})
+		
+	</script>
+	<style type="text/css">
+		.swiper-slide img{
+		width: 100%;
+	}
+	</style>
+</head>
+<body>
+	<div class="swiper-container">
+	 <div class="swiper-wrapper">
+	    <div class="swiper-slide" ><img src="../images/banner.png"></div>
+	    <div class="swiper-slide" ><img src="../images/banner.png"></div>
+	    <div class="swiper-slide" ><img src="../images/banner.png"></div>
+	     <div class="swiper-slide"><img src="../images/banner.png"></div>
+	  </div>
+	  <div class="swiper-pagination"></div>
+	</div>
+	<script> 
+	
+	var mySwiper = new Swiper('.swiper-container',{
+	autoplay: 3000,
+	pagination : '.swiper-pagination',
+	//pagination : '#swiper-pagination1',
+	autoplayDisableOnInteraction:false,
+	})
+	</script>
+	<div class="homePage_nav">
+		<ul class="homePage_list clearfix ">
+			<li data="get_one"><span class="nav-active">即将揭晓</span></li>
+			<li data="get_two"><span>人气商品</span></li>
+			<li data="get_three"><span>最新商品</span></li>
+			<li data="get_four"><span>价值高低</span></li>
+			<li class="hide "onclick=window.location.href="allProduct.html"><div class="auto"><img src="../images/-icon_menu.png"><div class="fenlei fl">分类</div></div></li>
+		</ul>
+	</div>
+	<ul class="homePage_product clearfix">
+		<li>
+			<div class="homePage_img" onclick=window.location.href="productDetail.html">
+				<img src="../images/gwc01.png">
+			</div>
+			<div class="homePage_product_info">
+				(第24323期)苹果6S
+			</div>
+			<div class="product_price">
+				价值:￥6088.00
+			</div>
+			<div class="product_jindu">
+				<div class="product_yes"></div>
+			</div>
+			<div class="product_select clearfix">
+				<div class="product fl"  onclick=window.location.href="payment.html">
+					一元团购
+				</div>		
+					<img src="../images/gz2.png" class="homePage_card fr" >				
+			</div>
+		</li>
+		<li>
+			<div class="homePage_img" onclick=window.location.href="productDetail.html">
+				<img src="../images/gwc01.png">
+			</div>
+			<div class="homePage_product_info">
+				(第24323期)苹果6S
+			</div>
+			<div class="product_price">
+				价值:￥6088.00
+			</div>
+			<div class="product_jindu">
+				<div class="product_yes"></div>
+			</div>
+			<div class="product_select clearfix" >
+				<div class="product fl" onclick=window.location.href="payment.html">
+					一元团购
+				</div>			
+					<img src="../images/gz2.png" class="fr homePage_card"  >			
+				</div>
+		</li>
+		<li>
+			<div class="homePage_img" onclick=window.location.href="productDetail.html">
+				<img src="../images/gwc01.png">
+			</div>
+			<div class="homePage_product_info">
+				(第24323期)苹果6S
+			</div>
+			<div class="product_price">
+				价值:￥6088.00
+			</div>
+			<div class="product_jindu">
+				<div class="product_yes"></div>
+			</div>
+			<div class="product_select clearfix">
+				<div class="product fl" onclick=window.location.href="payment.html">
+					一元团购
+				</div>
+				
+					<img src="../images/gz2.png" class="fr" >
+				
+			</div>
+		</li>
+		<li>
+			<div class="homePage_img" onclick=window.location.href="productDetail.html">
+				<img src="../images/gwc01.png">
+			</div>
+			<div class="homePage_product_info">
+				(第24323期)苹果6S
+			</div>
+			<div class="product_price">
+				价值:￥6088.00
+			</div>
+			<div class="product_jindu">
+				<div class="product_yes"></div>
+			</div>
+			<div class="product_select clearfix">
+				<div class="product fl"onclick=window.location.href="productDetail.html" >
+					一元团购
+				</div>
+				<div >
+					<img src="../images/gz2.png" class="homePage_card fr" >
+				</div>
+			</div>
+		</li>
+	</ul>
+	<div class="homePage_footer">
+		<ul class="clearfix">
+			<li class="bottom_nav" onclick=window.location.href="homePage.html">
+				<img src="../images/taungou01.png">
+				<p class="homepage_pRed">团购</p>
+			</li>
+			<li class="bottom_nav" onclick=window.location.href="latestAnnouncement.html">
+				<img src="../images/tuangou02.png">
+				<p>最新揭晓</p>
+			</li>
+			<li class="bottom_nav"onclick=window.location.href="shoppingCard.html" id="bottom_shopping">
+				<img src="../images/tuangou03.png">
+				<p>购物车</p>
+			</li>
+			<li class="bottom_nav" onclick=window.location.href="groudBuy.html">
+				<img src="../images/tuangou04.png">
+				<p>我的团购</p>
+			</li>
+		</ul>
+	</div>
+	
+	<div class="white">
+		
+	</div>
+	<div class="fix_bg">
+		
+	</div>
+</body>
+</html>

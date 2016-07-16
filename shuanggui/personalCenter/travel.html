@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>国内旅行报名</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="../css/shuanggui.css">
+	<link rel="stylesheet" href="../css/base.css">
+	<script type="text/javascript" src="../js/jquery-2.1.0.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$(".select_travel").click(function(){
+				$(this).find('#select_circle').toggleClass('travel_circle_dowm travel_circle_up');
+				$(this).find('.travel_boxSelect').toggle();
+				$(".select_touist").click(function(){
+					var aText=$(this).text();
+					$(".select_travel_online").text(aText);
+				});		
+			});
+		})
+	</script>
+	<style type="text/css">
+		.heading_name{
+			text-align: justify;
+		}
+	</style>
+</head>
+<body >
+	 <div class="travel_info">
+	 	<p class="travel_info_heading">个人信息:</p>
+	 	<ul>
+	 		<li>
+	 			<span class="heading_name">姓<!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->名:</span>
+	 			<input type="text" name="travelName" id="travelName">
+	 		</li>
+	 		<li>
+	 			<span class="heading_name">户<!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->籍:</span>
+	 			<input type="text" name="travelRegister" id="travelRegiste">
+	 		</li>
+	 		<li>
+	 			<span>身份证号:</span>
+	 			<input type="text" name="travelId" id="travelId">
+	 		</li>
+	 		<li>
+	 			<span class="heading_phone">手机号:</span>
+	 			<input type="text" name="travelPhone" id="travelPhone">
+	 		</li>
+	 	</ul>
+	 </div>
+	 <div class="travel_infomation">
+	 	<p class="travel_infomation_heading">旅游信息:</p>
+	 	<ul>
+	 		<li>
+	 			<span class="heading_name">航班号:</span>
+	 			<input type="text" name="planeName" id="planeName">
+	 		</li>
+	 		<li>
+	 			<span class="heading_name">旅行路线</span>
+	 			<div class="select_travel clearfix">
+	 				<p class="select_travel_online"></p>
+	 				<div class="travel_circle_dowm" id="select_circle"></div>
+	 				<div class="travel_boxSelect" style="display:none">
+		 				<ul>
+		 					<li class="select_touist">长隆水上乐园一日游</li>
+		 					<li class="select_touist">珠海长隆水上乐园一日游</li>
+		 					<li class="select_touist">深圳东部华侨城豪华劲爆一日游</li>
+		 				</ul>
+	 				</div>
+	 			</div>
+	 		</li>
+	 		<li>
+	 			<span class="heading_phone">旅行费用</span>
+	 			<input type="text" name="travelMoney" id="travelMoney">
+	 		</li>
+	 	</ul>
+	 </div>
+	 
+	 <div class="travel_button" onclick=window.location.href="travelError.html">
+	 	提交
+	 </div>
+</body>
+</html>

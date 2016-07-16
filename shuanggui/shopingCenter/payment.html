@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>支付结算</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="../css/shuanggui.css">
+	<link rel="stylesheet" href="../css/base.css">
+	<script type="text/javascript" src="../js/jquery-2.1.0.js"></script>
+	<script type="text/javascript" src="../js/fastclick.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			FastClick.attach(document.body);
+			$(".paymentOn").click(function(){
+				$("body").find(".paymentOn").find('.select_logo').removeClass('select_logo_active');
+				$(this).find('.select_logo').addClass('select_logo_active');		
+			});
+			$(".payment_discount").click(function(){
+				$(this).find('.select_logo').toggleClass('select_logo_active');	
+			});
+			$(".payment_content").delegate('li', 'click', function() {
+				
+			});
+		})
+	</script>
+</head>
+<body>
+	 <div class="payment_content">
+	 	<ul class="clearfix">
+	 		<li class="payment_list">
+	 			<div class="payment_img fl"> 
+	 				<img src="../images/tgzx.png">
+	 			</div>
+	 			<div class="payment_info fl">
+	 				<p>(第4111期)苹果 (APPLE) ipad</p>
+	 				<div class="payment_info_number">
+	 					<span>2</span>人次/<em>￥2.00</em>
+	 				</div>
+	 			</div>
+	 		</li>
+	 		<li class="payment_list">
+	 			<div class="payment_img fl"> 
+	 				<img src="../images/tgzx.png">
+	 			</div>
+	 			<div class="payment_info fl">
+	 				<p>(第4111期)苹果 (APPLE) ipad</p>
+	 				<div class="payment_info_number">
+	 					<span>2</span>人次/<em>￥2.00</em>
+	 				</div>
+	 			</div>
+	 		</li>
+			<li class="payment_list">
+	 			<div class="payment_img fl"> 
+	 				<img src="../images/tgzx.png">
+	 			</div>
+	 			<div class="payment_info fl">
+	 				<p>(第4111期)苹果 (APPLE) ipad</p>
+	 				<div class="payment_info_number">
+	 					<span>2</span>人次/<em>￥2.00</em>
+	 				</div>
+	 			</div>
+	 		</li><li class="payment_list">
+	 			<div class="payment_img fl"> 
+	 				<img src="../images/tgzx.png">
+	 			</div>
+	 			<div class="payment_info fl">
+	 				<p>(第4111期)苹果 (APPLE) ipad</p>
+	 				<div class="payment_info_number">
+	 					<span>2</span>人次/<em>￥2.00</em>
+	 				</div>
+	 			</div>
+	 		</li>
+	 	</ul> 	
+	 </div>
+	 <div class="payment_function clearfix">
+	 	  <div class="payment_all_price fr">
+	 	  	总需支付金额:<span>￥ 7.00</span>
+	 	  </div>
+	 	  <div class="payment_discount fl ">
+	 	  	<span>福利折扣:</span>
+	 	  	<em>(可用福分20)</em>
+	 	  	<div class="select_logo fr"></div>
+	 	  </div>
+	 	  <div class="balance_pay fl paymentOn">
+	 	  	<span>余额支付:</span>
+	 	  	<em>(余额￥0.00)</em>
+	 	  	<div class="select_logo fr"></div>
+	 	  </div>
+	 </div>
+	 <div class="other_pay">
+	 	  <ul>
+	 	  	  <li>
+	 	  	  	<span>第三方支付</span>
+	 	  	  </li>
+	 	  	  <li class="paymentOn">
+ 	  	  		<img src="../images/wx.png"class="weixin_logo fl">
+ 	  	  		<span>微信支付</span>
+ 	  	  		<div class="select_logo fr"></div>
+	 	  	  </li>
+	 	  </ul>
+	 </div>
+	 <div class="payment_button"onclick=window.location.href="paySuccess.html">
+	 	  立即支付
+	 </div>
+</body>
+</html>

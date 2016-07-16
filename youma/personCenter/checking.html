@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=750px,user-scalable=no">
+	<link rel="stylesheet" href="../css/base.css">
+	<link rel="stylesheet" href="../css/youma.css">
+	<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>
+	<title>待检中的商品</title>
+	<script type="text/javascript">
+	$(function(){
+		$("select_type li").click(function(){
+			$(this).addClass('font_active')
+					.siblings('li').removeClass('font_active');
+		});
+		$(".wrapIn").click(function(){
+			$(this).next(".product_detail").toggle();
+			$(this).find('.checking_content_heading').children('div').toggleClass('allDowm allUp');
+			var oS=$(this).parent().siblings('.checking_content')
+							.children('.wrapIn').find('.checking_content_heading').children('div');		
+		for(var i=0;i<oS.length;i++){
+				if(oS.eq(i).hasClass('allUp')){
+					oS.eq(i).removeClass('allUp');
+					oS.eq(i).addClass('allDowm');				
+				}
+			}
+		$(this).parent().siblings('.checking_content')
+						.children('.wrapIn').next(".product_detail").hide();
+		});
+	})
+	</script>
+</head>
+<body style="background-color: #f5f5f5;">
+	<div class="checking">
+		<nav class="select_type">
+			<ul class="clearfix">
+				<li class="font_active" onclick="window.location.href='checking.html'">订单状态</li>
+				<li onclick="window.location.href='finished.html'">待检完成</li>
+			</ul>
+		</nav>
+		<div class="checking_content">
+			<div class="wrapIn">
+				<div class="checking_content_heading">
+					<span>2016/05/05</span>
+					<div class="allDowm" ></div>
+				</div>
+				<div class="checking_content_center clearfix">
+					<div class="product_img">
+						<img src="../images/mike.png">
+					</div>
+					<div class="product_info">
+						<ul>
+							<li>
+								<span>产品名称:</span>
+								<em>的呀酸牛那</em>
+							</li>
+							<li>
+								<span>价格:</span>
+								<em>￥ 88</em>
+							</li>
+							<li>
+								<span>检测量:</span>
+								<em>5瓶</em>
+							</li>
+							<li>
+								<span>检费:</span>
+								<em style="color:#fc9d27;">￥ 50</em>
+							</li>
+							<li class="clearfix">
+								<span class="fl">生产日期:</span>
+								<p class="fl">2016-05-01至2016-09-10</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="product_detail">
+				<div class="product_detail_info">
+					<ul>
+						<li>
+							<span>商品地址:</span>
+							<em >龙胜人人乐</em>
+						</li>
+						<li>
+							<span>商品编号:</span>
+							<em >050556005615611</em>
+						</li>
+						<li>
+							<span>订单编号:</span>
+							<em >050556114777781</em>
+						</li>
+						<li>
+							<span>订单状态:</span>
+							<em >待检中</em>
+						</li>
+						<li>
+							<span>联系方式:</span>
+							<em >18825146568</em>
+						</li>
+					
+					</ul>
+				</div>
+				<div class="product_order">
+					<p>商家已收到商品,正在检测中</p>
+					<p>实验室:401</p>
+				</div>
+			</div>
+		</div>
+		<div class="checking_content">
+			<div class="wrapIn">
+				<div class="checking_content_heading">
+					<span>2016/05/05</span>
+					<div class="allDowm" ></div>
+				</div>
+				<div class="checking_content_center clearfix">
+					<div class="product_img">
+						<img src="../images/mike.png">
+					</div>
+					<div class="product_info">
+						<ul>
+							<li>
+								<span>产品名称:</span>
+								<em>的呀酸牛那</em>
+							</li>
+							<li>
+								<span>价格:</span>
+								<em>￥ 88</em>
+							</li>
+							<li>
+								<span>检测量:</span>
+								<em>5瓶</em>
+							</li>
+							<li>
+								<span>检费:</span>
+								<em style="color:#fc9d27;">￥ 50</em>
+							</li>
+							<li class="clearfix">
+								<span class="fl">生产日期:</span>
+								<p class="fl">2016-05-01至2016-09-10</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="product_detail">
+				<div class="product_detail_info">
+					<ul>
+						<li>
+							<span>商品地址:</span>
+							<em >龙胜人人乐</em>
+						</li>
+						<li>
+							<span>商品编号:</span>
+							<em >050556005615611</em>
+						</li>
+						<li>
+							<span>订单编号:</span>
+							<em >050556114777781</em>
+						</li>
+						<li>
+							<span>订单状态:</span>
+							<em >待检中</em>
+						</li>
+						<li>
+							<span>联系方式:</span>
+							<em >18825146568</em>
+						</li>
+						
+					</ul>
+				</div>
+				<div class="product_order">
+					<p>商家已收到商品,正在检测中</p>
+					<p>实验室:401</p>
+				</div>
+			</div>
+		</div>
+		<div class="checking_content">
+			<div class="wrapIn">
+				<div class="checking_content_heading">
+					<span>2016/05/05</span>
+					<div class="allDowm" ></div>
+				</div>
+				<div class="checking_content_center clearfix">
+					<div class="product_img">
+						<img src="../images/mike.png">
+					</div>
+					<div class="product_info">
+						<ul>
+							<li>
+								<span>产品名称:</span>
+								<em>的呀酸牛那</em>
+							</li>
+							<li>
+								<span>价格:</span>
+								<em>￥ 88</em>
+							</li>
+							<li>
+								<span>检测量:</span>
+								<em>5瓶</em>
+							</li>
+							<li>
+								<span>检费:</span>
+								<em style="color:#fc9d27;">￥ 50</em>
+							</li>
+							<li class="clearfix">
+								<span class="fl">生产日期:</span>
+								<p class="fl">2016-05-01至2016-09-10</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="product_detail">
+				<div class="product_detail_info">
+					<ul>
+						<li>
+							<span>商品地址:</span>
+							<em >龙胜人人乐</em>
+						</li>
+						<li>
+							<span>商品编号:</span>
+							<em >050556005615611</em>
+						</li>
+						<li>
+							<span>订单编号:</span>
+							<em >050556114777781</em>
+						</li>
+						<li>
+							<span>订单状态:</span>
+							<em >待检中</em>
+						</li>
+						<li>
+							<span>联系方式:</span>
+							<em >18825146568</em>
+						</li>
+						
+					</ul>
+				</div>
+				<div class="product_order">
+					<p>商家已收到商品,正在检测中</p>
+					<p>实验室:401</p>
+				</div>
+			</div>
+		</div>
+		<div class="checking_content">
+			<div class="wrapIn">
+				<div class="checking_content_heading">
+					<span>2016/05/05</span>
+					<div class="allDowm" ></div>
+				</div>
+				<div class="checking_content_center clearfix">
+					<div class="product_img">
+						<img src="../images/mike.png">
+					</div>
+					<div class="product_info">
+						<ul>
+							<li>
+								<span>产品名称:</span>
+								<em>的呀酸牛那</em>
+							</li>
+							<li>
+								<span>价格:</span>
+								<em>￥ 88</em>
+							</li>
+							<li>
+								<span>检测量:</span>
+								<em>5瓶</em>
+							</li>
+							<li>
+								<span>检费:</span>
+								<em style="color:#fc9d27;">￥ 50</em>
+							</li>
+							<li class="clearfix">
+								<span class="fl">生产日期:</span>
+								<p class="fl">2016-05-01至2016-09-10</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="product_detail">
+				<div class="product_detail_info">
+					<ul>
+						<li>
+							<span>商品地址:</span>
+							<em >龙胜人人乐</em>
+						</li>
+						<li>
+							<span>商品编号:</span>
+							<em >050556005615611</em>
+						</li>
+						<li>
+							<span>订单编号:</span>
+							<em >050556114777781</em>
+						</li>
+						<li>
+							<span>订单状态:</span>
+							<em >待检中</em>
+						</li>
+						<li>
+							<span>联系方式:</span>
+							<em >18825146568</em>
+						</li>
+						
+					</ul>
+				</div>
+				<div class="product_order">
+					<p>商家已收到商品,正在检测中</p>
+					<p>实验室:401</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximun-scale=1.0,user-scalable=no">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/base.css">
+	<title>分享赚钱</title>
+	<script type="text/javascript">
+	function copyText(obj){
+
+		 try{
+
+        var rng = document.body.createTextRange();
+
+        rng.moveToElementText(obj);
+
+        rng.scrollIntoView();
+
+        rng.select();
+
+        rng.execCommand("Copy");
+
+        rng.collapse(false);
+
+        alert("已复制成功");
+
+    }catch(e){
+
+        alert("您的浏览器不支持此复制功能，请选中相应内容并使用Ctrl+C进行复制!");
+
+    }
+}
+
+
+
+	</script>
+	<style type="text/css">
+	/* .div1{
+		width: 40px;
+		height: 40px;
+		background-color: red;
+	} */
+	</style>
+</head>
+<body>
+	<div class="share">
+		 <p>邀请好友一起玩转一元秒拍</p>
+		 <div>
+		 	1元能买很多东西哦,一种很有趣的购物方式,快来看看吧!
+		 	<span id="#tbid">http://www.hupu.com/</span>
+		 </div>
+	</div>
+	<div class="homePage_fix">
+		
+	</div>
+	<div class="share_button" onclick="copyText(document.all.tbid)">
+		复制链接
+	</div>
+</body>
+<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>	
+<script type="text/javascript">
+
+</script>
+</html>

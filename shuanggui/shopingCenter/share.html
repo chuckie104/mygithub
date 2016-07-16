@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../css/mui.min.css" />
+		<link rel="stylesheet" href="../css/base.css" />
+		<link rel="stylesheet" href="../css/shuanggui.css" />
+		<title>分享赚钱</title>
+		<style>
+			img{width: 100%;}
+			.mui-btn-outlined{
+				margin: 0 auto;
+			  border-radius: 11px;
+			  width: 350px;
+			  height: 50px;
+			  font-size: 20px;
+			  font-family: "Microsoft YaHei";
+			  line-height: 20px;
+			  margin-top: 10px;
+			}
+			.share_Text{text-align: center;margin-bottom: 20px;}
+			.mui-table-view-cell{position: relative;}
+			.share_fx{
+			  border-width: 2px;
+			  border-color: rgb(149, 149, 149);
+			  border-style: solid;
+			  border-radius: 10px;
+			  background-color: rgb(247, 247, 247);
+			  width: 90%;
+			  height:70px;
+			  margin: 0 auto;
+			  font-size: 24px;
+			  font-family: "Microsoft YaHei";
+			  color: rgb(113, 110, 110);
+			}
+			.share_fx p{
+				font-size: 14px;
+			}
+			/*重新布局*/
+			.share_content{width: 100%;height: 100px;font-size: 20px;font-family: "Microsoft YaHei";}
+			 .share_left,.share_right{
+			 	width: 49%;
+			 	height: 100px;
+			 	float: left;
+			 	text-align: center;
+			 	display: table;
+			 }
+			 .share_left div,.share_right div{
+			 	display: table-cell;
+			 	vertical-align: middle;
+			 }
+			/*竖线*/
+			 .share_line{
+		        float:left;  
+		        width: 2px;   
+				  background-color: rgb(229, 229, 229);
+				  height: 60px;
+				  margin-top: 20px;
+			}
+			.share_content .share_set{
+			  font-size: 18px;
+			  line-height: 0.907;
+			  color: #c91e1f;
+			  text-align: center;
+			}
+			/*底部按钮定位*/
+			.mui-button-row{
+				padding-top: 29px;
+			}
+			/*左边按钮*/
+			.mui-btn-primary {
+			  border-width: 2px;
+			  border-color: rgb(193, 32, 20);
+			  border-style: solid;
+			  border-radius: 10px;
+			  width: 40%;
+			  height: 50px;
+			  background-color: white;
+			  font-size: 16px;
+			  font-family: "Microsoft YaHei";
+			  color: #c91e1f;
+			  line-height: 0.967;
+			}
+			/*右边按钮*/
+			.mui-btn-danger {
+			  border-radius: 10px;
+			  background-color: #c91e1f;
+			  width: 50%;
+			  height: 50px;
+			  font-size: 16px;
+			  font-family: "Microsoft YaHei";
+			}
+		</style>
+	</head>
+	<body style="background:#fff">
+		<img src="../images/banner.png"/>
+		<button type="button" class="mui-btn mui-btn-primary mui-btn-block mui-btn-outlined" style="width: 55%; background-color: rgb(193, 32, 20);color: rgb(255, 255, 255);">立即赚钱</button>
+		<br />
+		<h4 class="share_Text">长按复制以下链接发送好友</h4>
+		<div class="share_fx">
+			<p style="padding-top: 10px;">&nbsp;&nbsp;一元就能买lphone6s,一种很有意思的购物方式，快来看看吧！http://y.1yyg.com/7j26Rz</p>
+		</div>
+		<div class="share_content">
+			<div class="share_left">
+				<div>
+					<p class="share_set">0</p>
+					<p>邀请好友</p>
+				</div>				
+			</div>
+			<div class="share_line"></div> 
+			<div class="share_right">
+				<div>
+					<p class="share_set">￥0.00</p>
+					<p>佣金余额</p>
+				</div>
+			</div>
+		</div>
+		<div class="share_list">
+			<ul class="clearfix">
+				<li >
+					<span>邀请记录</span>	
+					<img src="../images/arrow_right.png"class="myCard_arrowRight">
+				</li>
+				<li >
+					<span>佣金明细</span>	
+					<img src="../images/arrow_right.png"class="myCard_arrowRight">		
+				</li>
+				<li >
+					<span>提现记录</span>
+					<img src="../images/arrow_right.png"class="myCard_arrowRight">					
+				</li>
+			</ul>
+		</div>
+		<div class="mui-button-row">
+			<button type="button" class="mui-btn mui-btn-primary">佣金提现</button>
+			<button type="button" class="mui-btn mui-btn-danger">一键转让团购用户</button>
+		</div>
+	</body>
+</html>

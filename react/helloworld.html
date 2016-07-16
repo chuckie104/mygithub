@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="build/react.js"></script>
+    <script src="build/react-dom.js"></script>
+    <script src="build/browser.min.js"></script>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script type="text/babel">
+    var HelloMessage =React.createClass({
+      PropTypes:{
+          name:React.PropTypes.string.isRequired,
+        },
+      render:function(){  
+        return <div>{this.props.name}</div>;
+      }
+    });
+    var data="chuckie";
+     ReactDOM.render(
+        <HelloMessage name="chuckie">     
+        </HelloMessage>,
+        document.getElementById('example')
+      );
+    </script>
+  </body>
+</html>

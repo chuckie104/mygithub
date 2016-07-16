@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>转账</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="../css/shuanggui.css">
+	<link rel="stylesheet" href="../css/base.css">
+	<script type="text/javascript" src="../js/jquery-2.1.0.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$(".transfor_true").click(function(){
+				confirm("是否转换")
+			});
+			$(".transfor_select").click(function(){
+				var This=$(this);
+				$(".show_selected").toggle();
+				$("#circle_select").toggleClass('transfor_circle_dowm transfor_circle_up');
+				$(".show_selected li").click(function(){
+					var oText=$(this).text();
+					This.find('em').text(oText);
+				});
+			});
+		})
+	</script>
+</head>
+<body style="background:#fff">
+	<div class="transfor_header">
+		<div class="transfor_header_wrapin clearfix">
+			<div class="transfor_baodanbi">
+				<em>报单币:</em>
+				<span>￥1200</span>
+			</div>
+			<div class="transfor_jiangjin">
+				<em>剩余奖金</em>
+				<span>￥1020.20</span>
+			</div>
+			<div class="transfor_lvyou">
+				<em>旅游佣金</em>
+				<span>￥2000.20</span>
+			</div>
+		</div>
+	</div>
+	<div class="transfor_content">
+		<div class="transfor_type">
+			<span>转账类型:</span>
+			<div class="transfor_select clearfix">
+				<em>报单币转给其他会员</em>
+				<div class="transfor_circle_dowm" id="circle_select"></div>
+				<div class="show_selected">
+					<ul>
+						<li>剩余奖金转为账户余额</li>
+						<li>旅游佣金转为剩余奖金</li>
+						<li>旅游佣金转为账户余额</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="transfor_vip clearfix">
+			<span>会员编号:</span>
+			<input type="text" class="transfor_vip_text">
+		</div>
+		<div class="transfor_num clearfix">
+			<span>金额:</span>
+			<input type="text" class="transfor_vip_money">
+		</div>
+		<div class="transfor_true clearfix" onclick=window.location.href="myWallet.html">
+			确认转换
+		</div>
+	</div>
+	<div class="transfor_button" onclick=window.location.href="myCard.html">
+		个人中心
+	</div>
+</body>
+</html>

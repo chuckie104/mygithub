@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximun-scale=1.0,user-scalable=no">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/base.css">
+	<title>余额充值</title>
+</head>
+<body>
+	<div class="Rselect_money">
+		<p class="balance_heading">1、选择充值金额(元)</p>
+		<section>
+			<ul class="clearfix" >
+				<li><div class="select_coin">50</div></li>
+				<li><div class="select_coin">100</div></li>
+				<li><div class="select_coin">200</div></li>
+				<li><div class="select_coin">500</div></li>
+				<li><div class="select_coin">1000</div></li>
+				<li><div class="select_coin showMenu" >其余金额</div></li>
+			</ul>
+		</section>
+		<div class="show_input">
+			<input type="text"  id="input_money" placeholder="请输入金额(单位:元)">
+		</div>
+	</div>
+	<div class="Rselect_type">
+		<p class="balance_heading">2、选择支付方式</p>
+		<div>
+			<ul class="clearfix Rselect_type_list">
+				<!-- <li>
+					<div class="type_logo">
+						<img src="../images/yue.png">
+					</div>
+					<span>
+						余额支付<strong>(余额0.00元)</strong>
+					</span>
+					<em >
+						
+					</em>
+				</li> -->
+				<li>
+					<div class="type_logo">
+						<img src="../images/weixin.png">
+					</div>
+						<span>
+						微信支付
+					</span>
+					<em>
+						
+					</em>
+				</li>
+				<li>
+					<div class="type_logo">
+						<img src="../images/alipay.png">
+					</div>
+						<span>
+						支付宝支付
+					</span>
+					<em>
+						
+					</em>
+				</li>
+				<li>
+					<div class="type_logo">
+						<img src="../images/bank.png">
+					</div>
+						<span>
+						银行卡支付
+					</span>
+					<em>
+						
+					</em>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="homePage_fix">
+		
+	</div>
+	<div class="recharge_bottom">
+		确认支付
+	</div>
+</body>
+<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript">
+	 $(function(){
+	 	$(".select_coin").click(function(){
+	 		$(this).toggleClass('money_active')
+	 		$(this).parent().siblings("li").find('.select_coin').removeClass('money_active');
+	 		if($(this).hasClass('showMenu')){
+	 			$(".show_input").toggle();
+	 		}else{
+	 			$(".show_input").hide();
+	 		}
+	 	});
+
+	 	$(".Rselect_type_list li").click(function(){
+	 		$(this).find('em').toggleClass('select_type_active');
+	 		$(this).siblings().find('em').removeClass('select_type_active');
+	 	});
+	 })
+</script>
+</html>

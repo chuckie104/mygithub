@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=750px,user-scalable=no">
+	<link rel="stylesheet" href="../css/base.css">
+	<link rel="stylesheet" href="../css/youma.css">
+	<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" src="../js/editPerson.js"></script>
+	<script type="text/javascript" src="../js/address.js"></script>
+	<title>修改信息</title>
+	<style type="text/css">
+	body{
+		background-color: #f5f5f5;
+	}
+	</style>
+	<script type="text/javascript">
+	$(function(){
+		addressInit('cmbProvince', 'cmbCity', 'cmbArea', '广东省', '深圳市', '南山区');
+	})
+	</script>
+</head>
+<body>
+	<div class="editPerson">
+		<div class="edit_wrapin">
+			 <div class="editPerson_head">
+			 	<img src="../images/touxiang.png">
+			 	<div class="edit_bg">
+			 		 编辑
+			 	</div>
+			 </div>
+		 </div>
+		<div class="editPerson_content">
+			<ul class="edit_list">
+				<li>
+					<span>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名:</span>
+					<input type="text" name="edit_name" id="" class="edit_text"value="高健">
+				</li>
+				<li>
+					<span>性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别:</span>
+					<label class="select_female">
+						<input type="radio" name="gender" id="female" class="gender_radio">
+						<strong></strong>
+						<em>女</em>
+					</label>
+					<label class="select_male">				
+						<input type="radio" name="gender" id="male"class="gender_radio" checked="checked">
+						<strong ></strong>
+						<em>男</em>
+					</label>
+				</li>
+				<li>
+					<span>手机号码:</span>
+					<input type="text" name="edit_phone" id="" class="edit_text" maxlength="11" value="18825146869">
+				</li>
+				<li>
+					<span>出生日期:</span>
+					<input type="text" name="edit_date" id="" class="edit_text">
+				</li>
+				<li>
+					<span>邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱:</span>
+					<input type="text" name="edit_mail" id="" class="edit_text"value="18815151@qq.com">
+				</li>
+				<li>
+					<span>常用地址:</span>
+					<div class="select_address">
+						<div class="select_pro">
+							<select id="cmbProvince" >
+							</select>
+							<em class="circle_dowm"></em>
+						</div>
+						<div class="select_city">
+							<select id="cmbCity" >
+							</select>
+							<em class="circle_dowm"></em>
+						</div>
+						<div class="select_qu">
+							<select id="cmbArea" >
+								<option>123</option>
+								<option>456</option>
+								<option>789</option>
+							</select>
+							<em class="circle_dowm"></em>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="editPerson_address">
+						<input type="text" class="address_text">
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="edit_button" onclick="window.location.href='personCenter.html'">
+			保存
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximun-scale=1.0,user-scalable=no">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/base.css">
+	<title>所有商品</title>
+	
+
+</head>
+<body style="background:#fff;">
+	 <div class="allProduct_nav">
+	 	 <ul class="clearfix">
+	 	 	<li >
+	 	 		<span>
+	 	 		   即将揭晓
+	 	 		</span>
+	 	 		<div style="display:block"></div>
+	 	 	</li>
+	 	 	<li>
+	 	 		<span>
+	 	 			人气 
+	 	 		</span>
+	 	 		<div></div>
+	 	 	</li>
+	 	 	<li>
+	 	 		<span>
+	 	 			价格
+	 	 		</span>
+	 	 		<div></div>
+	 	 	</li>
+	 	 	<li>
+	 	 		<span>
+	 	 			商品分类<em class="circle_dowm"></em>
+	 	 		</span>
+	 	 	</li>
+	 	 </ul>
+	 </div>
+	 <div class="end_alert">
+			<div>
+				 <img src="../images/select_logo_active.png">
+				 <span>添加购物车成功</span>
+			</div>
+	</div>
+	 <div class="allProduct_content clearfix">
+	 	<ul>
+	 		<li>
+	 			<div class="allProduct_product_img fl">
+	 				<img src="../images/product_home.png">
+	 			</div>
+	 			<div class="allProduct_product_info fl">
+	 				<p>三只松鼠 芒果干116G#3袋[包邮]芒果干芒果干</p>
+	 				<div class="allProduct_info_bot clearfix">
+	 					<div class="allProduct_bot_left">
+		 					<div class="all_jindu">
+		 						<div class="all_jindu_wrap"></div>
+		 					</div>
+		 					<div class="jindu_online clearfix">
+		 						<section class="apart_in">
+		 							<p>0</p>
+		 							<div>已参与</div>
+		 						</section>
+		 						<section class="all_in">
+		 							<p>16</p>
+		 							<div>总需人次</div>
+		 						</section>
+		 						<section class="remain_in">
+		 							<p>16</p>
+		 							<div>剩余</div>
+		 						</section>
+		 					</div>
+	 					</div>
+	 					<div class="allProduct_bot_right fr">
+	 						<img src="../images/shop_logo.png">
+	 					</div>
+	 				</div>
+	 			</div>
+	 		</li>
+	 		<li>
+	 			<div class="allProduct_product_img fl">
+	 				<img src="../images/product_home.png">
+	 			</div>
+	 			<div class="allProduct_product_info fl">
+	 				<p>三只松鼠 芒果干116G#3袋[包邮]芒果干芒果干</p>
+	 				<div class="allProduct_info_bot clearfix">
+	 					<div class="allProduct_bot_left">
+		 					<div class="all_jindu">
+		 						<div class="all_jindu_wrap"></div>
+		 					</div>
+		 					<div class="jindu_online clearfix">
+		 						<section class="apart_in">
+		 							<p>0</p>
+		 							<div>已参与</div>
+		 						</section>
+		 						<section class="all_in">
+		 							<p>16</p>
+		 							<div>总需人次</div>
+		 						</section>
+		 						<section class="remain_in">
+		 							<p>16</p>
+		 							<div>剩余</div>
+		 						</section>
+		 					</div>
+	 					</div>
+	 					<div class="allProduct_bot_right fr">
+	 						<img src="../images/shop_logo.png">
+	 					</div>
+	 				</div>
+	 			</div>
+	 		</li>
+	 	</ul>
+	 </div>
+	 <div class="homePage_fix">
+		
+	</div>
+	<div class="bot_nav">
+		<ul class="clearfix">
+			<li  class="active_nav" onclick="window.location.href='homePage.html'">
+				<div class="chuizi chuizi_active"></div>
+				<p>秒&nbsp;&nbsp;拍</p>
+			</li>
+
+			<li onclick="window.location.href='nowShow.html'">
+				<div class="xingxing"></div>
+				<p>最新揭晓</p>
+			</li>
+			
+			<li onclick="window.location.href='showOrder.html'">
+				<div class="shaidan"></div>
+				<p>晒&nbsp;&nbsp;单</p>
+			</li>
+			<li onclick="window.location.href='shoppingCard.html'" id="shopping_card">
+				<div class="gouwuche">
+					<span class="shopping_num">1</span>
+				</div>
+				<p>购物车</p>
+			</li>
+			<li onclick="window.location.href='myCloud.html'">
+				<div class="yungou"></div>
+				<p>我的云购</p>
+			</li>
+		</ul>
+	</div>
+</body>
+<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="../js/fastclick.js"></script>
+<script type="text/javascript" src="../js/add2.js"></script>
+<script type="text/javascript">
+	$(function(){
+		FastClick.attach(document.body);
+		$(".allProduct_nav li:lt(3)").click(function(){
+			$(this).children('div').show();
+			$(this).siblings('li').children('div').hide();
+		});
+		$(".allProduct_nav li").eq(3).click(function(){
+			alert("暂不开发此功能");
+		});
+	})
+</script>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=750px,user-scalable=no">
+	<link rel="stylesheet" href="../css/base.css">
+	<link rel="stylesheet" href="../css/youma.css">
+	<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" src="../js/editPerson.js"></script>
+	<script type="text/javascript" src="../js/address.js"></script>
+	<title>修改地址</title>
+	<style type="text/css">
+	body{
+		background:#f5f5f5;
+	}
+	.editPerson_content{
+		height: 600px;
+		padding: 76px 46px;
+	}
+
+	
+	</style>
+	<script type="text/javascript">
+	$(function(){
+		$(".label").click(function(){
+			$(this).children('div').toggleClass('moren_active');
+		});
+		addressInit('cmbProvince', 'cmbCity', 'cmbArea', '广东省', '深圳市', '南山区');
+
+		$("#cmbProvince>option").eq(0).attr("selected","true");
+											
+	})
+	</script>
+</head>
+<body>
+	<div class="editPerson">
+		<div class="editPerson_content">
+			<ul class="edit_list">
+				<li>
+					<span>收&nbsp;货&nbsp;人&nbsp;:</span>
+					<input type="text" name="edit_name" id="" class="edit_text"value="高健">
+				</li>
+				<li>
+					<span>手机号码:</span>
+					<input type="text" name="edit_phone" id="" class="edit_text" maxlength="11" value="18825146869">
+				</li>
+				<li>
+					<span>取货地址:</span>
+					<div class="select_address">
+						<div class="select_pro">
+							<!-- <p>广东</p>
+							
+							<div class="pro_list">
+								<ul>
+									<li>广西</li>
+									<li>广西</li>
+									<li>广西</li>
+									<li>广西</li>
+								</ul>
+							</div> -->
+							<select id="cmbProvince" >
+							</select>
+							<em class="circle_dowm"></em>
+						</div>
+						<div class="select_city">
+							<!-- <p>深圳市</p>
+							<em class="circle_dowm"></em>
+							<div class="city_list">
+								<ul>
+									<li>广州市</li>
+									<li>茂名市</li>
+									<li>惠州市</li>
+									<li>江门市</li>
+								</ul>
+							</div> -->
+							<select id="cmbCity" >
+							</select>
+							<em class="circle_dowm"></em>
+						</div>
+						<div class="select_qu">
+							<!-- <p>宝安区</p>
+							<em class="circle_dowm"></em>
+							<div class="qu_list">
+								<ul>
+									<li>宝安区</li>
+									<li>南山区</li>
+									<li>福田区 </li>
+									<li>罗湖区</li>
+								</ul>
+							</div> -->
+							<select id="cmbArea" >
+							</select>
+							<em class="circle_dowm"></em>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="editPerson_address">
+						<input type="text" class="address_text"value="深圳市南山区诺德假日花园">
+					</div>
+				</li>
+				<li>
+					<label class="label">
+						<div class="set_moren "></div>
+						<p class="set_mo">设为默认</p>
+					</label>
+				</li>
+			</ul>
+		</div>
+		<div class="add_button" onclick="window.location.href='editAddress.html'">
+			保存
+		</div>
+	</div>
+</body>
+</html>

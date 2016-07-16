@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximun-scale=1.0,user-scalable=no">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/base.css">
+	<title>普通会员</title>
+</head>
+<body>
+	  <div class="cloud_header">
+	 	 <div class="cloud_wrap">
+	 	 	 <div class="img_header">
+	 	 	 	<img src="../images/touxiang2.png">
+	 	 	 </div>
+	 	 	 <p>chuckie</p>
+	 	 	<h3 style="color:#da3651;">普通会员</h3>
+	 	 </div>
+	 </div>
+	
+	 <div class="parnet_content">
+	 	  <h3>升级会员可享受更多权限！</h3>
+	 	  <div class="parnet_select clearfix">
+	 	  		<div class="select_two select_vip">
+	 	  	   	   <p>创业合伙人</p>
+	 	  	   	   <p>99元/年</p>
+	 	  	  	 </div>
+	 	  	   <div class="select_ong">
+	 	  	   	   <p>vip合伙人</p>
+	 	  	   	   <p>299元/年</p>
+	 	  	   </div>
+
+	 	  </div>
+	 	  <section class="select_two_info">
+	 	  	<p>1、创业合伙人邀请普通会员，创业合伙人下面有个中奖者，则创业合伙人可以拿佣金，根据相应的会员等级，级别来结算佣金。</p>
+	 	  	<p>2、商品的单价*15%，提现需要2%的手续费。</p>
+	 	  </section>
+	 	  <section class="select_one_info" style="display:none">
+	 	  	<p>1、vip合伙人邀请普通会员，vip合伙人下面有个中奖者，则vip合伙人可以拿佣金，根据相应的会员等级，级别来结算佣金。</p>
+	 	  	<p>2、商品的单价*2%，提现需要1%的手续费。</p>
+	 	  </section>
+	 </div>
+	 <div class="bg_fix">
+		
+	</div>
+	<div class="payment_active" onclick="window.location.href='buyVip.html'">
+		确定支付
+	</div>
+
+</body>
+<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$(".parnet_select div").click(function(){
+ 				$(this).toggleClass('select_vip')
+ 						.siblings('div').removeClass('select_vip');
+ 						if($(this).hasClass('select_ong')){
+ 							$(".select_one_info").show().siblings('section').hide();
+ 						}else if($(this).hasClass('select_two')){
+							$(".select_two_info").show().siblings('section').hide();
+ 				}
+		});
+	
+	})
+</script>
+</html>

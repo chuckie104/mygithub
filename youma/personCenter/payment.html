@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=750px,user-scalable=no">
+	<link rel="stylesheet" href="../css/base.css">
+	<link rel="stylesheet" href="../css/youma.css">
+	<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>
+	<title>支付</title>
+	<style type="text/css">
+	body{
+		background:#f5f5f5;
+	}
+	</style>
+	<script type="text/javascript">
+	$(function(){
+		$("#payment_num").focus(function(){
+			$(this).css('border-color', '#4ba6ed');
+		}).blur(function(){
+			$(this).css('border-color', '#d2d2d2');
+		});
+	})
+	</script>
+</head>
+<body>
+	<div class="payment_online">
+		<div class="payment_money">
+			<p >
+				支付公正金:
+			</p>
+			<input type="text" name="money" id="payment_num" placeholder="请输入金额">
+			<span>
+				元
+			</span>
+		</div>
+		<div class="payment_select">
+			<label>
+				<div class="weChat_logo">
+					<img src="../images/weixin.png">
+				</div>
+				<p>
+					微信支付
+				</p>
+				<input type="radio" name="payment_type" >
+				<div class="select_box">
+					
+				</div>
+			</label>
+			<label>
+				<div class="alipay_logo">
+					<img src="../images/alipay.png">
+				</div>
+				<p>
+					支付宝支付
+				</p>
+				<input type="radio" name="payment_type" >
+				<div class="select_box">
+					
+				</div>
+			</label>
+			<label>
+				<div class="bank_logo">
+					<img src="../images/bank.png">
+				</div>
+				<p>
+					银行卡支付
+				</p>
+				<input type="radio" name="payment_type" >
+				<div class="select_box">
+					
+				</div>
+			</label>
+		</div>
+	</div>
+	<div class="payment_bottom">
+		<div class="payment_button">
+			支付
+		</div>
+		<p>
+			1、我们将在3个工作日内完成身份验证审批，以短信方式通知您。
+		</p>
+		<p>
+			2、审批未通过，将在审批后三个工作日内退款
+		</p>
+	</div>
+</body>
+</html>

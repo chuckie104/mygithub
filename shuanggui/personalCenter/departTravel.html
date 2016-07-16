@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>出境旅行报名</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="../css/shuanggui.css">
+	<link rel="stylesheet" href="../css/base.css">
+	<script type="text/javascript" src="../js/jquery-2.1.0.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$(".select_departTravel").click(function(){
+				$(this).find('#select_circle').toggleClass('departTravel_circle_dowm departTravel_circle_up');
+				$(this).find('.departTravel_boxSelect').toggle();
+				$(".select_touist").click(function(){
+					var aText=$(this).text();
+					$(".select_departTravel_online").text(aText);
+				});		
+			});
+		})
+	</script>
+</head>
+<body >
+	 <div class="departTravel_info">
+	 	<p class="departTravel_info_heading">个人信息:</p>
+	 	<ul>
+	 		<li>
+	 			<span class="heading_name">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名:</span>
+	 			<input type="text" name="departTravelName" id="departTravelName">
+	 		</li>
+	 		<li>
+	 			<span class="heading_name">护&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;籍:</span>
+	 			<input type="text" name="departTravelRegister" id="departTravelRegiste">
+	 		</li>
+	 		<li>
+	 			<span>身份证号:</span>
+	 			<input type="text" name="departTravelId" id="departTravelId">
+	 		</li>
+	 		<li>
+	 			<span class="heading_phone">手&nbsp;&nbsp;机&nbsp; 号:</span>
+	 			<input type="text" name="departTravelPhone" id="departTravelPhone">
+	 		</li>
+	 	</ul>
+	 </div>
+	 <div class="departTravel_infomation">
+	 	<p class="departTravel_infomation_heading">旅游信息:</p>
+	 	<ul>
+	 		<li>
+	 			<span class="heading_name">航&nbsp;&nbsp;班&nbsp; 号:</span>
+	 			<input type="text" name="planeName" id="planeName">
+	 		</li>
+	 		<li>
+	 			<span class="heading_name">旅行路线</span>
+	 			<div class="select_departTravel clearfix">
+	 				<p class="select_departTravel_online"></p>
+	 				<div class="departTravel_circle_dowm" id="select_circle"></div>
+	 				<div class="departTravel_boxSelect" style="display:none">
+		 				<ul>
+		 					<li class="select_touist">韩国济州岛三日游</li>
+		 					<li class="select_touist">台湾垦丁海角七号五日游</li>
+		 					<li class="select_touist">日本冲绳岛豪华五日游</li>
+		 				</ul>
+	 				</div>
+	 			</div>
+	 		</li>
+	 		<li>
+	 			<span class="heading_phone">旅行费用</span>
+	 			<input type="text" name="departTravelMoney" id="departTravelMoney">
+	 		</li>
+	 	</ul>
+	 </div>
+	 <div class="departTravel_credentials">
+	 	  <ul>
+	 	  	<li>
+	 	  	 	<span class="heading_name">护&nbsp;&nbsp;照&nbsp; 号:</span>
+	 			<input type="text" name="passportNo" id="passportNo">
+	 		</li>
+	 		<li>
+	 			<span class="heading_name">护&nbsp;&nbsp;&nbsp;照&nbsp;&nbsp; &nbsp;:</span>
+	 			<div class="passport_img fl">
+	 				 <div class="passport_img_face fl">
+	 				 	<div>
+	 				 		<img src="../images/add_logo.png" class="add_logo">
+	 				 	</div>
+	 				 </div>
+	 				 <div class="passport_img_back fl">
+	 				 	<img src="../images/add_logo.png" class="add_logo">
+	 				 </div>
+	 			</div>
+	 		</li>
+	 	  </ul>
+	 </div>
+	 
+	 <div class="departTravel_button" onclick=window.location.href="departTravelError.html">
+	 	提交
+	 </div>
+</body>
+</html>

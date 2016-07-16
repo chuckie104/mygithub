@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximun-scale=1.0,user-scalable=no">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/base.css">
+	<title>购物车</title>
+	<style type="text/css">
+	@media screen and (max-width: 320px){
+		.shopping_list{
+			font-size: 12px;
+		}
+		.shopping_list p{
+			line-height: 15px !important;
+		}
+		.shopping_list li{
+			height: 100px;
+		}
+		.shopping_images{
+			width: 80px !important;
+		}
+		.productInfo_bot {
+			height: 30px !important;
+			line-height: 30px !important;
+		}
+		.productInfo_bot div{
+			height: 30px !important;
+			line-height: 28px !important;
+			font-size: 12px !important;
+		}
+		.productInfo_bot 
+		.jian,.jia{
+			width: 25px !important;
+		}
+		.shuliang{
+			width: 30px !important;
+		}
+		.select_num{
+					margin-top:  0px !important;
+					margin-left: 5px !important;
+				}
+		.delect_shoping{
+			bottom: 10px !important;
+		}
+		.select_logo{
+			top: 39px !important;
+		}
+	}
+	</style>
+</head>
+<body>
+	<div class="shoppingCard">
+		<ul class="shopping_list clearfix">
+			<li>
+				<h3 class="select_logo ">
+					
+				</h3>
+				<div class="shopping_images">
+					<img src="../images/ipad1.png">
+				</div>
+				<div class="shopping_info">
+					<p class="shopping_info_heading">
+						（第499期）正品Apple/苹果9.7英寸ipad pro平板电脑
+					</p>
+					<div class="shopping_person">总需:450人次 剩余:122人次</div>
+					<div class="productInfo_bot clearfix">
+						 <section class="fl">参与人次</section>
+						 <section class="fl" style="margin-top: 5px;margin-left: 15px;">
+						 	<div class="jian fl">-</div>
+						 	<div class="shuliang fl">0</div>
+						 	<div class="jia fl">+</div>
+						 </section>
+					</div>
+				</div>
+				<div class="delect_shoping">
+					<img src="../images/trash.png">
+					删除
+				</div>
+			</li>
+			<li>
+				<h3 class="select_logo ">
+					
+				</h3>
+				<div class="shopping_images">
+					<img src="../images/ipad.png">
+				</div>
+				<div class="shopping_info">
+					<p class="shopping_info_heading">
+						（第499期）正品Apple/苹果9.7英寸ipad pro平板电脑
+					</p>
+					<div class="shopping_person">总需:450人次 剩余:122人次</div>
+					<div class="productInfo_bot clearfix">
+						 <section class="fl" style="font-size=12px;">参与人次</section>
+						 <section class="fl select_num" >
+						 	<div class="jian fl">-</div>
+						 	<div class="shuliang fl">0</div>
+						 	<div class="jia fl">+</div>
+						 </section>
+					</div>
+				</div>
+				<div class="delect_shoping">
+					<img src="../images/trash.png">
+					删除
+				</div>
+			</li>	
+		</ul>
+	</div>
+	<div class="shopping_fix">
+		
+	</div>
+	<div class="shopping_pay clearfix">
+		<section>共<span>2</span>件商品,总计 :<em>20</em>元</section>
+		<div id="payment_btn"onclick="window.location.href='payOrder.html'">结算</div>
+	</div>
+	<div class="bot_nav">
+		<ul class="clearfix">
+			<li  onclick="window.location.href='homePage.html'">
+				<div class="chuizi"></div>
+				<p>秒&nbsp;&nbsp;拍</p>
+			</li>
+			<li onclick="window.location.href='nowShow.html'">
+				<div class="xingxing"></div>
+				<p>最新揭晓</p>
+			</li>
+			
+			<li onclick="window.location.href='showOrder.html'">
+				<div class="shaidan"></div>
+				<p>晒&nbsp;&nbsp;单</p>
+			</li>
+			<li class="active_nav" onclick="window.location.href='shoppingCard.html'">
+				<div class="gouwuche gouwuche_active"></div>
+				<p>购物车</p>
+			</li>
+			<li onclick="window.location.href='myCloud.html'">
+				<div class="yungou"></div>
+				<p>我的云购</p>
+			</li>
+		</ul>
+	</div>
+</body>
+<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>	
+<script type="text/javascript" src="../js/fastclick.js"></script>
+<script type="text/javascript">
+	$(function(){
+		FastClick.attach(document.body);
+		$(".select_logo").click(function(){
+			$(this).toggleClass('select_logo_active');
+		});
+		//数量的加减
+		$(".jian").click(function(){
+			var This=$(this);
+	    		var num=This.siblings('.shuliang').text();
+	    		var iNum=parseInt(num);
+	    		
+	    		if (iNum==0) {
+	    			This.siblings('.shuliang').text(0);
+	    			alert("不能再少了");
+	    		}else{
+	    			This.siblings('.shuliang').text(iNum-1);
+	    		}
+	    		
+	    	});
+	    $(".jia").click(function(){
+	    	var This=$(this);
+	    	var num=This.siblings('.shuliang').text();
+	    	var iNum=parseInt(num);
+	    	This.siblings('.shuliang').text(iNum+1);
+	    });
+	    $(".shopping_images").find('img').click(function(){
+			window.location.href="productDetail.html";
+		});
+	})
+</script>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>报单支付</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="../css/shuanggui.css">
+	<link rel="stylesheet" href="../css/base.css">
+	<script type="text/javascript" src="../js/jquery-2.1.0.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$(".baodanCenter_weixin").click(function(){
+				 $(this).find('.select_logo').toggleClass('select_logo_active');
+			});	
+			$(".baodanCenter_button").click(function(){
+				alert("支付成功");
+			});
+		})
+	</script>
+</head>
+<body>
+	<div class="baodanCenter_content  clearfix" style="background:white">
+	 	  <div class="baodanCenter_coin fl">
+	 	  	  <span>
+	 	  	  	支付金额:
+	 	  	  </span>
+	 	  	  <input type="text" name="baodanCenter_money" id="baodanCenter_money" style="background:white">
+	 	  </div>
+	 	  <div class="baodanCenter_pay fl">
+	 	  	  <div class="baodanCenterOn ">
+	 	  	  	<span class="fl">
+	 	  	  		支付方式:
+	 	  	  	</span>
+	 	  	  	<div class="baodanCenter_weixin fl">
+	 	  	  		<img src="../images/weixinR.png"class="baodanCenter_weixin_logo fl">
+	 	  	  		<em>微信支付</em>	 	  	  		
+	 	  	  		<div class="select_logo fr"></div>
+ 	  	  		</div>
+	 	  	 </div>
+	 	</div>
+	 </div>
+	 <div class="baodanCenter_info">
+	 	  <p>申请报单中心：</p>
+	 	  <p>1、后台自定义金额</p>
+	 	  <p>2、微信支付惊喜不断</p>
+	 	  <p>3、支付金额后开启报单中心</p>
+	 </div>
+	 <div class="baodanCenter_button" onclick=window.location.href="servic2Center.html"
+>
+		确定
+	</div>
+</body>
+</html>

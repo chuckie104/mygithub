@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximun-scale=1.0,user-scalable=no">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/base.css">
+	<title>我的云购</title>
+</head>
+<body>
+	 <div class="cloud_header">
+	 	 <div class="cloud_wrap">
+	 	 	 <div class="img_header">
+	 	 	 	<img src="../images/touxiang2.png" onclick="window.location.href='editCard.html'">
+	 	 	 </div>
+	 	 	 <p>chuckie</p>
+	 	 	 <section>余额:<span class="red">0.00</span>元</section>
+	 	 	 <div class="recharge_button"onclick="window.location.href='balanceRecharge.html'"  >
+	 	 	 	充值
+	 	 	 </div>
+	 	 </div>
+	 </div>
+	 <div class="cloud_content">
+	 	<ul class="clearfix">
+	 		<!-- <li>
+	 			<div class="cloud_logo">
+	 				<img src="../images/cloud_logo.png">
+	 			</div>
+	 			<div class="cloud_online">
+	 				我的福分
+	 			</div>
+	 			<div class="cloud_arrow">
+	 				<img src="../images/right_arrow.png">
+	 			</div>
+	 		</li> -->
+	 		<li onclick="window.location.href='cloudRecord.html'" >
+	 			<div class="cloud_logo">
+	 				<img src="../images/cloud_logo2.png">
+	 			</div>
+	 			<div class="cloud_online">
+	 				云购记录
+	 			</div>
+	 			<div class="cloud_arrow">
+	 				<img src="../images/right_arrow.png">
+	 			</div>
+	 		</li>
+	 		<li onclick="window.location.href='getProduct.html'">
+	 			<div class="cloud_logo">
+	 				<img src="../images/cloud_logo3.png">
+	 			</div>
+	 			<div class="cloud_online" >
+	 				获得商品
+	 			</div>
+	 			<div class="cloud_arrow">
+	 				<img src="../images/right_arrow.png">
+	 			</div>
+	 		</li>
+	 		<li onclick="window.location.href='myShai.html'">
+	 			<div class="cloud_logo">
+	 				<img src="../images/cloud_logo4.png">
+	 			</div>
+	 			<div class="cloud_online">
+	 				我的晒单
+	 			</div>
+	 			<div class="cloud_arrow">
+	 				<img src="../images/right_arrow.png">
+	 			</div>
+	 		</li>
+	 		<li onclick="window.location.href='MyConcern.html'">
+	 			<div class="cloud_logo">
+	 				<img src="../images/cloud_logo5.png">
+	 			</div>
+	 			<div class="cloud_online">
+	 				我的关注
+	 			</div>
+	 			<div class="cloud_arrow">
+	 				<img src="../images/right_arrow.png">
+	 			</div>
+ 		</li>
+	 	</ul>
+	 </div>
+	 <div class="cloud_share clearfix" onclick="window.location.href='share.html'">
+	 	<div class="cloud_logo">
+	 				<img src="../images/cloud_logo6.png">
+	 			</div>
+	 			<div class="cloud_online">
+	 				分享赚钱
+	 			</div>
+	 			<div class="cloud_arrow">
+	 				<img src="../images/right_arrow.png">
+	 			</div>
+		 </div>
+		 <div class="homePage_fix">
+		
+	</div>
+	<div class="bot_nav">
+		<ul class="clearfix">
+			<li  onclick="window.location.href='homePage.html'">
+				<div class="chuizi"></div>
+				<p>秒&nbsp;&nbsp;拍</p>
+			</li>
+			<li onclick="window.location.href='nowShow.html'">
+				<div class="xingxing"></div>
+				<p>最新揭晓</p>
+			</li>
+			
+			<li onclick="window.location.href='showOrder.html'">
+				<div class="shaidan"></div>
+				<p>晒&nbsp;&nbsp;单</p>
+			</li>
+			<li onclick="window.location.href='shoppingCard.html'">
+				<div class="gouwuche"></div>
+				<p>购物车</p>
+			</li>
+			<li class="active_nav" onclick="window.location.href='myCloud.html'">
+				<div class="yungou yungou_active"></div>
+				<p>我的云购</p>
+			</li>
+		</ul>
+	</div>
+</body>
+<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="../js/fastclick.js"></script>
+<script type="text/javascript">
+	$(function(){
+		FastClick.attach(document.body);
+	})
+</script>
+</html>

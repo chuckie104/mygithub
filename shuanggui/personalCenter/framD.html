@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>系统框架图</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="../css/shuanggui.css">
+	<link rel="stylesheet" href="../css/base.css">
+	<script type="text/javascript" src="../js/jquery-2.1.0.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$(".quxiao_text").click(function(){
+				$("#frameMember").val("");
+			})
+		})
+	</script>
+</head>
+<body>
+	<div class="frame_header">
+		<div class="frame_table_cell clearfix">
+			<input type="text" name="frameMember" id="frameMember"placeholder="输入成员名称">
+			<div id="frameSearch">
+				搜索
+				<img src="../images/search_03.png" alt="取消搜索文字" class="quxiao_text">
+			</div>
+		</div>
+	</div>
+	<div class="frame_content">
+		<ul>
+			<li>
+				<div class="list_wrapin">
+					<img src="../images/query_logo2.png">
+					<p>B</p>
+				</div>
+			</li>
+			<li>
+				<div class="list_wrapin">
+					<img src="../images/query_logo.png">
+					<p>C</p>
+				</div>
+			</li>
+			<li>
+				<div class="list_wrapin">
+					<img src="../images/query_logo.png">
+					<p>D</p>
+				</div>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>

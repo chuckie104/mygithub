@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>查看推荐关系</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="../css/shuanggui.css">
+	<link rel="stylesheet" href="../css/base.css">
+	<script type="text/javascript" src="../js/jquery-2.1.0.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			//删除输入信息
+			$(".quxiao_text").click(function(){
+				$("#queryMember").val("");
+			});
+			//下拉菜单.arrow_up.arrow_dowm
+			$(".queryReferee_list li").click(function(){
+				$(this).next(".query_show_box").toggle();
+				$(this).children('div').toggleClass('arrow_dowm arrow_up');
+			});
+		})
+	</script>
+</head>
+<body>
+	<div class="queryReferee_header">
+		<div class="table_cell clearfix">
+			<input type="text" name="queryMember" id="queryMember"placeholder="输入成员名称">
+			<div id="querySearch">
+				搜索
+				<img src="../images/search_03.png" alt="取消搜索文字" class="quxiao_text">
+			</div>
+		</div>
+	</div>
+	<div class="queryReferee_content">
+		<div class="parent">
+			<img src="../images/query_logo2.png" class="query_logo">
+			<span>A</span>
+		</div>
+		<ul class="queryReferee_list clearfix">
+			<li>
+				<img src="../images/query_logo.png"class="query_logo">
+				<span>B</span>
+				<div class="arrow_up"></div>
+			</li>
+			<div class="query_show_box">
+				<div class="query_show_fir">
+					<img src="../images/touxiang.png">
+					<span>B1</span>
+				</div>
+				<div class="query_show_sec">
+					<img src="../images/touxiang.png">
+					<span>B2</span>
+				</div>
+			</div>
+			<li>
+				<img src="../images/query_logo.png"class="query_logo">
+				<span>C</span>
+				<div class="arrow_dowm">
+				</div>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>

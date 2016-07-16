@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>奖金提现</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="../css/shuanggui.css">
+	<link rel="stylesheet" href="../css/base.css">
+	<script type="text/javascript" src="../js/jquery-2.1.0.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$(".bonusShow_button").click(function(){
+				
+			});
+		})
+	</script>
+</head>
+<body style="background:#fff;">
+	<div class="bonusShow_header">
+		<div class="bonusShow_header_wrapin">
+			<div class="bonusShow_header_yue">
+				<em>账户余额:</em>
+				<span>￥1200.00</span>
+			</div>
+			<div class="bonusShow_header_baojinbi">
+				<em>报金币:</em>
+				<span>￥1020.20</span>
+			</div>
+		</div>
+	</div>
+	<div class="bonusShow_content">
+		<div class="bonusShow_content_wrapin clearfix">
+			<div class="bonusShow_box">
+				<span>
+					提现金额:
+				</span>
+				<input type="text" class="show_money" name="showMoney">
+			</div>
+			<div class="bonusShow_box">
+				<span>提现方式:</span>
+				<div class="payType">
+					<label class="wechat">
+						<input type="radio" name="payType" class="wechatPay">
+						<strong></strong>
+						<em>微信</em>
+					</label>
+					<label class="alipay">
+						<input type="radio" name="payType" class="aliPay">
+						<strong></strong>
+						<em>支付宝</em>
+					</label>
+				</div>
+			</div>
+			<div class="bonusShow_box">
+				<span>
+					提现姓名:
+				</span>
+				<input type="text" class="show_name" name="showName">
+			</div>
+			<div class="bonusShow_box">
+				<span>
+					提现账户:
+				</span>
+				<input type="text" class="show_account" name="showAccount">
+			</div>
+		</div>
+	</div>
+	<div class="bonusShow_button">
+		确认
+	</div>
+</body>
+</html>

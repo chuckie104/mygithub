@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximun-scale=1.0,user-scalable=no">
+	<link rel="stylesheet" href="../css/base.css">
+	<link rel="stylesheet" href="../css/youma.css">
+	<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>
+	<title>选择收货地址</title>
+	<style type="text/css">
+	body{
+		background:#f5f5f5;
+
+	}
+	.address_wrap{
+		height: 66px;
+	}
+	</style>
+	<script type="text/javascript">
+	$(function(){
+		var pText=$(".address_Person em").text();
+		var aText=$(".address_phone em").text();
+		var iText=$(".address_info em").text();
+
+		for(var i=0;i<$(".address_list em").length;i++){
+			var text=$(".address_list em").eq(i).text();
+
+		};
+		$(".address_wrap").click(function(){
+			window.location.href="application.html";
+		});
+	})
+	</script>
+
+</head>
+<body>
+	<div class="editAddress">
+		<ul class="address_list  clearfix">
+			<li>
+				<div class="address_wrap">
+					<div class="address_Person">
+						<span>收&nbsp;件&nbsp; 人:</span>
+						<em>高健</em>
+					</div>
+					<div class="address_phone">
+						<span>联系方法:</span>
+						<em>18825146568</em>
+					</div>
+					<div class="address_info">
+						<span>取货地址:</span>
+						<em>深圳市观澜高新技术园宝能科技大厦</em>
+					</div>
+				</div>
+				<div class="edit_logo clearfix" onclick="window.location.href='alterAddress.html'">
+					<img src="../images/edit.png">
+					<p >编辑</p>
+				</div>
+			</li>
+				<li>
+				<div class="address_wrap">
+					<div class="address_Person">
+						<span>收&nbsp;件&nbsp; 人:</span>
+						<em>高健</em>
+					</div>
+					<div class="address_phone">
+						<span>联系方法:</span>
+						<em>18825146568</em>
+					</div>
+					<div class="address_info">
+						<span>取货地址:</span>
+						<em>深圳市观澜高新技术园宝能科技大厦</em>
+					</div>
+				</div>
+				<div class="edit_logo clearfix"onclick="window.location.href='alterAddress.html'">
+					<img src="../images/edit.png">
+					<p >编辑</p>
+				</div>
+			</li>
+		</ul>
+		<section class="newAddress_button" onclick="window.location.href='addAddress.html'">
+				<img src="../images/add.png">新增地址
+		</section>
+	</div>
+</body>
+</html>

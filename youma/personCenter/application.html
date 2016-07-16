@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximun-scale=1.0,user-scalable=no">
+	<link rel="stylesheet" href="../css/base.css">
+	<link rel="stylesheet" href="../css/youma.css">
+	<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>
+	<meta charset="UTF-8">
+	<title>申请预约</title>
+	<script type="text/javascript">
+	$(function(){
+		$(".appli_button").click(function(){
+			var oC=confirm("提交成功，是否返回首页")
+
+			if(oC){
+				window.location.href="wantCheck.html";
+			}else{
+
+			}
+		});
+		$(".delect_button").click(function(){
+			var oC=confirm("是否取消该订单")
+
+			if(oC){
+				window.location.href="wantCheck.html";
+			}else{
+
+			}
+		});
+	})
+	</script>
+</head>
+<body style="background-color: #f5f5f5;">
+		<div class="application">
+			<nav class="select_type">
+				<ul class="clearfix">
+					<li class="font_active"onclick="window.location.href='application.html'" style="width:100%;">申请预约</li>
+				</ul>
+			</nav>
+			<div class="application_info">
+				<div class="pro_info clearfix">
+					<div class="pro_img">
+						<img src="../images/mike.png">
+					</div>
+					<div class="saoyisao">
+						<img src="../images/saoyisao.png">
+					</div>
+					<div class="pro_online">
+						<ul>
+							<li>
+								<span>产品名称:</span>
+								<em>的呀酸牛那</em>
+							</li>
+							<li>
+								<span>价&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格:</span>
+								<em>￥ 88</em>
+							</li>
+							<li>
+								<span>检&nbsp;测&nbsp;量:</span>
+								<em>5瓶</em>
+							</li>
+							<li>
+								<span>检&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;费:</span>
+								<em style="color:#fc9d27;">￥ 50</em>
+							</li>
+							<li class="clearfix">
+								<span class="fl">生产日期:</span>
+								<p class="fl">2016-05-01至2016-09-10</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="pro_info_active">
+					<div>
+						<span>商品地址:</span>
+						<em>龙胜人人乐</em>
+					</div>
+					<div>
+						<span>商品编号:</span>
+						<em>1516651561616161</em>
+					</div>
+					<div class="delect_button">
+						取消
+					</div>
+				</div>
+			</div>
+			<div class="user_address">
+				<div class="old_address">
+					[默认地址]
+				</div>
+				<ul class="clearfix">
+					<li>
+						<span>收&nbsp;件&nbsp;人:</span>
+						<em>高健</em>
+					</li>
+					<li>
+						<span>联系方式:</span>
+						<em>15166515441</em>
+					</li>
+					<li>
+						<span>取货地址:</span>
+						<em>深圳市观澜高新技术园宝能科技大厦</em>
+					</li>
+				</ul>
+			</div>
+			<section class="newAddress_button" onclick="window.location.href='editAddress.html'">
+				<img src="../images/add.png">更改地址
+			</section>
+			<div class="appli_button">
+				提交
+			</div>
+		</div>
+</body>
+</html>

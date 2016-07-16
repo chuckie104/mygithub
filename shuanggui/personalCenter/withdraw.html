@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>充值页面</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="../css/shuanggui.css">
+	<link rel="stylesheet" href="../css/base.css">
+	<script type="text/javascript" src="../js/jquery-2.1.0.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$(".recharge_weixin").click(function(){
+				 $(this).find('.select_logo').toggleClass('select_logo_active');
+			});	
+			$(".recharge_button").click(function(){
+				alert("提现成功");
+			});
+		})
+	</script>
+	<style type="text/css">
+		.rechargeOn label{
+			width: 100%;
+			display: block;
+
+		}
+		label input{
+			margin-bottom: 10px;
+			    display: block;
+			    border: 1px solid #e5e5e5;
+			    height: 30px;
+			    width: 70%;
+			    float: left;
+			    background: #f8f8f8;
+		}
+	</style>
+</head>
+<body style="background:#f8f8f8">
+	 <div class="recharge_balance">
+	 	<div class="recharge_balance_wrap">
+	 	  <span>可提取奖金:</span>
+	 	  <em>400.00</em>
+	 	  <strong>元</strong>
+	 	 </div>
+	 </div>
+	 <div class="recharge_content  clearfix">
+	 	  <div class="recharge_coin fl">
+	 	  	  <span>
+	 	  	  	提现金额:
+	 	  	  </span>
+	 	  	  <input type="text" name="recharge_money" id="recharge_money">
+	 	  </div>
+	 	  <div class="recharge_pay fl">
+	 	  	  <div class="rechargeOn ">
+	 	  	  	<label class="cardNo">
+	 	  	  		<span>卡号:</span>
+					<div></div>
+	 	  	  		<input type="text" name="cardNo" id="cardNo" >
+	 	  	  		<!-- value="${memberPayno.bankcardNo }" -->
+	 	  	  	</label>
+	 	  	  		<label class="holder">
+	 	  	  		<span>开户名:</span><input type="text" name="holder" id="holder" >
+	 	  	  		<!-- value="${memberPayno.cardName }" -->
+	 	  	  		</label>
+	 	  	  		<label class="bankName">
+	 	  	  			<span>开户银行：</span><input type="text" name="bank" id="bankName" >
+	 	  	  			<!-- value="${memberPayno.bankName }" -->
+	 	  	  		</label>
+	 	  	  		<label class="bankAddress">
+	 	  	  		<span>开户行地址：</span><input type="text" name="bank" id="bankAddress" >
+	 	  	  		<!-- value="${memberPayno.bankOpenname }" -->
+ 	  	  			</label>
+	 	  	  </div>
+	 		</div>
+	 </div>
+	 <div class="recharge_button" onclick=window.location.href="myWallet.html"
+>
+	 	  确定提现
+	 </div>
+</body>
+</html>

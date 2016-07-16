@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>奖金明细</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="../css/shuanggui.css">
+	<link rel="stylesheet" href="../css/base.css">
+	<script type="text/javascript" src="../js/jquery-2.1.0.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			//上下箭头切换与下拉三角形切换
+			/*$(".IncomeDetail_select").delegate('li', 'click', function() {
+				$(this).next(".IncomeDetail_menu").toggle();
+				$(this).siblings('li').next(".IncomeDetail_menu").hide();
+				$(this).children('strong').toggleClass('IncomeDetail_select_circleDowm IncomeDetail_select_circleUp');
+			});*/
+			$(".IncomeDetail_list").click(function(){
+				$(this).next(".IncomeDetail_menu").toggle();
+				/*$(this).siblings('li').next(".IncomeDetail_menu").hide();*/
+				$(this).children('strong').toggleClass('IncomeDetail_select_circleDowm IncomeDetail_select_circleUp');
+			});
+			$(".IncomeDetail_button").click(function(){
+				alert("提现成功");
+			})
+		})
+	</script>
+</head>
+<body style="background:#fff;">
+	<div class="IncomeDetail_mon clearfix">
+		<span>4月份</span>
+		<div class="IncomeDetail_mon_circleDowm">			
+		</div>
+	</div>
+	<ul class="IncomeDetail_select clearfix">
+		<li class="IncomeDetail_list">
+			<span>见点奖</span>
+			<em>100.00</em>
+			<strong class="IncomeDetail_select_circleDowm"></strong>
+		</li>
+		<div class="IncomeDetail_menu" style="display:none">
+			<div class="IncomeDetail_box">
+				<p>会员编号</p>
+				<div class="IncomeDetail_id">A9</div>
+			</div>
+			<div class="IncomeDetail_box">
+				<p>时间</p>
+				<div class="IncomeDetail_time">2016.04.02</div>
+			</div>
+			<div class="IncomeDetail_box">
+				<p>税务</p>
+				<div class="IncomeDetail_tax" >-18.0</div>
+			</div>
+			<div class="IncomeDetail_box">
+				<p>实发工资</p>
+				<div class="IncomeDetail_salary" >82.00</div>
+			</div>
+		</div>
+		<li class="IncomeDetail_list">
+			<span>对碰奖</span>
+			<em>100.00</em>
+			<strong class="IncomeDetail_select_circleDowm"></strong>
+		</li>
+		<div class="IncomeDetail_menu">
+			<div class="IncomeDetail_box">
+				<p>会员编号</p>
+				<div class="IncomeDetail_id">A9</div>
+			</div>
+			<div class="IncomeDetail_box">
+				<p>时间</p>
+				<div class="IncomeDetail_time">2016.04.02</div>
+			</div>
+			<div class="IncomeDetail_box">
+				<p>税务</p>
+				<div class="IncomeDetail_tax" >-18.0</div>
+			</div>
+			<div class="IncomeDetail_box">
+				<p>实发工资</p>
+				<div class="IncomeDetail_salary" >82.00</div>
+			</div>
+		</div>
+		<li class="IncomeDetail_list">
+			<span>领导奖</span>
+			<em>100.00</em>
+			<strong class="IncomeDetail_select_circleDowm"></strong>
+		</li>
+		<div class="IncomeDetail_menu">
+			<div class="IncomeDetail_box">
+				<p>会员编号</p>
+				<div class="IncomeDetail_id">A9</div>
+			</div>
+			<div class="IncomeDetail_box">
+				<p>时间</p>
+				<div class="IncomeDetail_time">2016.04.02</div>
+			</div>
+			<div class="IncomeDetail_box">
+				<p>税务</p>
+				<div class="IncomeDetail_tax" >-18.0</div>
+			</div>
+			<div class="IncomeDetail_box">
+				<p>实发工资</p>
+				<div class="IncomeDetail_salary" >82.00</div>
+			</div>
+		</div>
+		<li class="IncomeDetail_list">
+			<span>管理奖</span>
+			<em>100.00</em>
+			<strong class="IncomeDetail_select_circleDowm"></strong>
+		</li>
+		<div class="IncomeDetail_menu">
+			<div class="IncomeDetail_box">
+				<p>会员编号</p>
+				<div class="IncomeDetail_id">A9</div>
+			</div>
+			<div class="IncomeDetail_box">
+				<p>时间</p>
+				<div class="IncomeDetail_time">2016.04.02</div>
+			</div>
+			<div class="IncomeDetail_box">
+				<p>税务</p>
+				<div class="IncomeDetail_tax" >-18.0</div>
+			</div>
+			<div class="IncomeDetail_box">
+				<p>实发工资</p>
+				<div class="IncomeDetail_salary" >82.00</div>
+			</div>
+		</div>
+	</ul>
+	<div class="more clearfix">
+		<div class="more_left"></div>
+		<div class="see_more">查看更多</div>
+		<div class="more_right"></div>
+	</div>
+	<div class="IncomeDetail_button"onclick=window.location.href="withdraw.html" >
+		提现
+	</div>
+</body>
+</html>

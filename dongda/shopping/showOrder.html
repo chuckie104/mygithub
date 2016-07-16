@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximun-scale=1.0,user-scalable=no">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/base.css">
+	<title>我的晒单</title>
+</head>
+<body>
+	<nav id="showOrder_nav" class="clearfix">
+		<section>最新<div style="display:block"></div></section>
+		<section>精华<div></div></section>
+		<section>推荐<div></div></section>
+		<section>人气<div></div></section>
+	</nav>
+	<div class="showOrder">
+		<ul>
+			<li>
+				<div class="showOrder_product clearfix">
+					<div class="showOrder_touxiang">
+						<img src="../images/touxiang2.png">
+					</div>
+					<div class="showOrder_product_info">
+						<p>获奖商品:Apple iphone plus</p>
+						<p>本期参与:16人次</p>
+						<p>幸运号码:10002455</p>
+						<p>揭晓时间:2016/06/08</p>
+					</div>
+					<div class="cTime">
+						2016/06/08
+					</div>
+				</div>
+				<div class="showOrder_info">
+					<p>自从知道我得奖之后，我才知道这一切不是在做梦</p>
+					<img src="../images/product_home.png">
+				</div>
+			</li>
+			<li>
+				<div class="showOrder_product clearfix">
+					<div class="showOrder_touxiang">
+						<img src="../images/touxiang2.png">
+					</div>
+					<div class="showOrder_product_info">
+						<p>获奖商品:Apple iphone plus</p>
+						<p>本期参与:16人次</p>
+						<p>幸运号码:10002455</p>
+						<p>揭晓时间:2016/06/08</p>
+					</div>
+					<div class="cTime">
+						2016/06/08
+					</div>
+				</div>
+				<div class="showOrder_info">
+					<p>自从知道我得奖之后，我才知道这一切不是在做梦</p>
+					<img src="../images/product_home.png">
+				</div>
+			</li>
+		</ul>
+	</div>
+	
+		<div class="homePage_fix">
+		
+	</div>
+	<div class="bot_nav">
+		<ul class="clearfix">
+			<li  onclick="window.location.href='homePage.html'">
+				<div class="chuizi"></div>
+				<p>秒&nbsp;&nbsp;拍</p>
+			</li>
+			<li onclick="window.location.href='nowShow.html'">
+				<div class="xingxing"></div>
+				<p>最新揭晓</p>
+			</li>
+			
+			<li class="active_nav" onclick="window.location.href='showOrder.html'">
+				<div class="shaidan shaidan_active"></div>
+				<p>晒&nbsp;&nbsp;单</p>
+			</li>
+			<li onclick="window.location.href='shoppingCard.html'">
+				<div class="gouwuche"></div>
+				<p>购物车</p>
+			</li>
+			<li onclick="window.location.href='myCloud.html'">
+				<div class="yungou"></div>
+				<p>我的云购</p>
+			</li>
+		</ul>
+	</div>
+</body>
+<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="../js/fastclick.js"></script>
+<script type="text/javascript">
+	$(function(){
+		FastClick.attach(document.body);
+		$("#showOrder_nav section").click(function(){
+			$(this).children('div').show();
+			$(this).siblings().children("div").hide();
+		});
+	})
+</script>
+</html>
