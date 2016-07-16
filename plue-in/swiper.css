@@ -1,0 +1,34 @@
+#banner_box{
+		width: 100%;
+		position: relative;
+		overflow: hidden;
+	}
+	#banner_list{
+		position: relative;
+	}
+	#banner_list li{
+		width: 100%;
+		float: left;	
+	}
+	#banner_dot{
+		width: 100%;
+		position: absolute;
+		z-index: 999;
+		bottom: 10px;
+		left: 0px;
+		text-align: center;
+	}
+	.radius_dot{
+		width: 10px;
+		height: 10px;
+		background-color:#b2b2b2;
+		border-radius: 100%;
+		display: inline-block;
+		margin: 0 4px;
+	}
+	.active_dot{
+		background-color:red;
+	}
+	li img{
+		width: 100%;
+	}
