@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<script type="text/javascript" src="js/jquery-2.1.0.js">
+		</script>
+		<script type="text/javascript">
+		$(function(){
+			var padge=true;
+			$("#home").click(function(){
+				if(padge){
+				$(this).css('WebkitTransform', 'rotate(-360deg)');
+		
+				for(var i=0;i<5;i++){
+					var aIr=-150;
+					var oDeg=(90/4)*i;
+					var oLt=loLT(aIr,oDeg);
+					$("#menu_list img").eq(i).css({
+						top: oLt.iTop,
+						left: oLt.iLeft,
+						WebkitTransitionDelay:+i*150+"ms"
+					});
+					}
+				}else{
+				$(this).css('WebkitTransform', 'rotate(0deg)');	
+					$("#menu_list img").css({
+						top:0,
+						left: 0
+					});
+				}	
+				padge=!padge;
+			})
+			function loLT(iR,iDeg){
+				return{
+						iLeft:Math.round(Math.sin(iDeg/180*Math.PI)*iR),
+						iTop:Math.round(Math.cos(iDeg/180*Math.PI)*iR)
+					}
+			}
+		})
+		</script>
+		<style type="text/css">
+		body{
+			background: #f9f9f9;
+		}
+		#menu{
+			width: 50px;
+			height: 50px;
+			position: fixed;
+			right: 20px;
+			bottom: 20px;
+		}
+		#menu_list{
+			height: 42px;
+			width: 42px;
+			position: relative;
+			margin: 4px;
+		}
+		#menu_list img{
+			border-radius: 21px;
+			position: absolute;
+			left: 0;
+			top: 0;
+			-webkit-transition:0.5s all ease;
+
+		}
+		#home{
+			width: 50px;
+			height: 50px;
+			background: url(images/home.png) no-repeat;
+			border-radius: 25px;
+			position: absolute;
+			left: 0;
+			top: 0;
+			-webkit-transition:3s;
+		}
+		</style>
+	</head>
+	<body>
+		<div id="menu">
+			<div id="menu_list">
+				<img src="images/prev.png">
+				<img src="images/open.png">
+				<img src="images/clos.png">
+				<img src="images/full.png">
+				<img src="images/refresh.png">
+			</div>
+			<div id="home"></div>
+		</div>
+		
+	</body>
+	</html>	
