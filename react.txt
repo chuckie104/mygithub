@@ -1,0 +1,44 @@
+React严格使用驼峰
+
+dangerouslySetInnerHTML:在jsx中直接插入HTML代码
+ref：父组件引用子组件
+key：提高渲染性能
+this.refs.[refName]返回真实的dom节点
+
+React{
+	自有方法 （生命周期与render,getInitialState）
+	用户定义方法
+}
+
+触摸（onTouchCancel,onTouchEnd,onTouchMove,onTouchStart ）
+键盘 (onKeyDowm,onKeyUP,onPress)
+剪切 (onCopy,onCut,onPaste)
+表单 (onChange,onInput,onSubmit)
+焦点 (onFoucus,onBlur)
+ui元素 (onScroll)
+滚动(onWheel)
+鼠标(onClick onContextMenu onDoubleClick onMouse...)
+鼠标拖拽(onDrop,onDrag.onDragEnd..)
+
+React主要方法
+React.findDOMNode(this)
+
+初始化的五个钩子函数
+getDefaultProps
+getInitialState
+componentWillMount
+render
+componentDidMount (在此函数中操作真正的dom)
+
+运行中的函数
+compinentWillReceiveProps
+shouldComponentUpdate
+componentWillUpdate
+render
+componnetDidUpdate 
+
+销毁阶段
+componentWillUnmount
+
+
+
